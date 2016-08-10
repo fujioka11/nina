@@ -26,19 +26,20 @@ a{
 }
 
 .wrap {
-  width: 100% - 2.7*2;
-  height: 100%;
+  width: 100%;
   position: relative;
-  @include center();
   background: #fff;
 }
 
 header{
-  text-align: right;
+  text-align: left;
+  background: #fff;
 
   h1{
     font-weight: normal;
     @include fts(11);
+    margin-left: 40px;
+    padding: 20px 0;
   }
 }
 
@@ -46,8 +47,8 @@ nav{
   background: #fff none repeat scroll 0 0;
   min-height: 280px;
   position: fixed;
-  left: 2.77%;
-  top: 60px;
+  left: 0px;
+  top: 46px;
   width: $navwidth;
   z-index: 1;
   padding: 40px;
@@ -74,5 +75,6 @@ nav{
   margin-left: $navwidth + $navleft;
   position: relative;
   background: #ff0000;
-  min-width: 1080px;
+  min-width: $main_size;
+  @include parsent(20,1080);
 }

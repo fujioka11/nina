@@ -86,28 +86,28 @@ a {
     text-decoration: underline; }
 
 .wrap {
-  width: 94.6%;
-  height: 100%;
+  width: 100%;
   position: relative;
-  margin-right: auto;
-  margin-left: auto;
   background: #fff; }
 
 header {
-  text-align: right; }
+  text-align: left;
+  background: #fff; }
   header h1 {
     font-weight: normal;
     font-size: 11px;
     font-size: 11px;
     font-size: 1.1rem;
-    line-height: 2.18182; }
+    line-height: 2.18182;
+    margin-left: 40px;
+    padding: 20px 0; }
 
 nav {
   background: #fff none repeat scroll 0 0;
   min-height: 280px;
   position: fixed;
-  left: 2.77%;
-  top: 60px;
+  left: 0px;
+  top: 46px;
   width: 260px;
   z-index: 1;
   padding: 40px; }
@@ -129,7 +129,9 @@ nav {
   margin-left: 300px;
   position: relative;
   background: #ff0000;
-  min-width: 1080px; }
+  min-width: 1080px;
+  margin-right: 1.85185%;
+  /*height: 0px;*/ }
 
 /*キーカラー*/
 /*フォントカラー*/
@@ -152,9 +154,9 @@ nav {
     background: url(../img/top/img_top.jpg) no-repeat 0 0;
     background-position: left center;
     background-size: cover;
-    padding-top: calc(100% * 300 / 850);
+    padding-top: calc(100% * 500 / 850);
     z-index: -1;
-    margin-left: 21.3%;
+    margin-left: 21.2963%;
     min-width: 850px;
     /*@include widtnPercent( 1080, 850 );
     background: url(../img/top/img_top.jpg) no-repeat 0 0;
