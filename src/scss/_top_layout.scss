@@ -1,0 +1,24 @@
+.top_inner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /*height: 100%;*/
+
+  .subtitle{
+    position:absolute;
+    left:0px;
+    top:100px;
+    z-index:2;
+  }
+  .top-img{
+    position: absolute;
+    right: 0px;
+    display: block;
+    min-width: 850px;
+    background-image: url(../img/top/img_top.jpg);
+    z-index: -1;
+    @include backgroundsize(600, 1080);
+    /*clip: rect(0px, 850px, 600px, 0px);*/
+    background-size: cover;
+  }
+}

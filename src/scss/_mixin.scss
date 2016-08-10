@@ -1,0 +1,133 @@
+//claerfix
+@mixin cf() {
+	*zoom: 1;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+@mixin center() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//パーセント
+@mixin widtnPercent( $parentPxWidth, $pxWidth ){
+    width: ceil((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
+}
+//パーセント
+@mixin topPercent( $parentPxWidth, $pxWidth ){
+    top: ceil((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
+}
+
+//ポジション配置
+
+@mixin positions($wid_size){
+	position: absolute;
+	left: 50%;
+	margin-left: $wid_size;
+}
+
+@mixin fts($fts, $lin: 24) {
+  $rem: $fts / 10;
+  $linS: $lin / $fts;
+  font-size: #{$fts}px;
+  font-size: #{$rem}rem;
+  line-height: $linS;
+}
+
+@mixin backgroundsize($imgheight, $imgwidth) {
+	padding-top: $imgheight / $imgwidth *100%;
+	height: 0px;
+	background-size: cover;
+}
+
+
+
+
+//h3のテキスト
+@mixin top-h3() {
+	@include fts(20);
+	color: $basecolor;
+}
+
+@mixin p-txt(){
+	@include fts(14);
+	color: $txtxcolor;
+}
+
+
+
+
+//グラデ
+@mixin gradient-top-lighten($color:#E8E8E8, $lighten:7%){
+background-color: $color;
+@include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
+
+//animation
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+// Responsive Mixins
+@mixin respond($media) {
+
+  // $sm-device-width (639px)以下の場合
+  @if $media == xs {
+    @media print, screen and (max-width: $sm-device-width - 1) { @content; }
+  }
+
+  // $sm-device-width (640px)以上 〜 $md-device-width (767px)以下の場合
+  // @else if $media == sm {
+  // 	@media print, screen and (min-width: $sm-device-width) and (max-width: $md-device-width - 1) { @content; }
+  // }
+
+  // $md-device-width (640px)以上 〜 $lg-device-width (999px)以下の場合
+  @else if $media == md {
+  	@media print, screen and (min-width: $sm-device-width) and (max-width: $lg-device-width - 1) { @content; }
+  }
+
+  // $lg-device-width (1000px)以下の場合
+  // @else if $media == mobile {
+  //   @media print, screen and (max-width: $lg-device-width - 1) { @content; }
+  // }
+
+  // $lg-device-width (1000px)以上 〜 $xl-device-width (1279px)以下の場合
+  @else if $media == lg {
+  	@media print, screen and (min-width: $lg-device-width) and (max-width: $xl-device-width - 1) { @content; }
+  }
+
+  // $xl-device-width (1000px)以上の場合
+  @else if $media == pc {
+    @media print, screen and (min-width: $lg-device-width) { @content; }
+  }
+
+  // $xl-device-width (1280px)以上の場合
+  @else if $media == xl {
+    @media print, screen and (min-width: $xl-device-width) { @content; }
+  }
+
+  @else {
+    @media print, screen and ('#{$media}') { @content; }
+  }
+}

@@ -1,0 +1,54 @@
+.footer{
+  background-color: #fff;
+  padding: 80px 0;
+
+  .footer_inner{
+    background: #353535;
+    width: 1200px;
+    height: 79px;
+    @include center();
+    @include cf();
+  }
+
+  .copyright{
+    color: #fff;
+    @include fts(12);
+    float: left;
+  }
+
+  .contactbn{
+    font-family: "メイリオ", sans-serif;
+    float: right;
+    background: #12A9B3;
+    height: 79px;
+    width: 380px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    padding: 25px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    @include fts(15,28);
+    position: relative;
+
+      &:after{
+        position: absolute;
+        top: 50%;
+        	right: 1.3em;
+          content: '';
+          margin-top: -5px;
+          border: 7px solid transparent;
+          border-top-width: 5px;
+          border-bottom-width: 5px;
+          border-left-color: #fff;
+          transition: all .3s;
+    }
+  }
+
+}
+
+.arrow::before{
+
+}
