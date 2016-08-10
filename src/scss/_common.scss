@@ -1,10 +1,15 @@
-body{
+html{
+  height: 100%;
+}
+  body{
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 1.8em;
   font-family:  "Verdana",'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif!important;
   color: $basecolor;
+  height: 100%;
+  background: #fff;
 }
 
 li{
@@ -21,9 +26,11 @@ a{
 }
 
 .wrap {
-  width: 100%;
+  width: 100% - 2.7*2;
   height: 100%;
   position: relative;
+  @include center();
+  background: #fff;
 }
 
 header{
@@ -39,7 +46,7 @@ nav{
   background: #fff none repeat scroll 0 0;
   min-height: 280px;
   position: fixed;
-  left: 0;
+  left: 2.77%;
   top: 60px;
   width: $navwidth;
   z-index: 1;
@@ -66,4 +73,6 @@ nav{
 .main{
   margin-left: $navwidth + $navleft;
   position: relative;
+  background: #ff0000;
+  min-width: 1080px;
 }
