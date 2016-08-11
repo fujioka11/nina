@@ -141,15 +141,18 @@ nav {
 .top_inner {
   margin: 0 auto;
   width: 100%;
-  min-height: 100%;
   text-align: left;
   background: #fff;
   position: relative; }
   .top_inner .subtitle {
     position: absolute;
     left: 0px;
-    top: 100px;
-    z-index: 2; }
+    top: 130px;
+    z-index: 2;
+    width: 100%; }
+    .top_inner .subtitle svg {
+      width: 50%;
+      fill: #000000; }
   .top_inner .top-img {
     background: url(../img/top/img_top.jpg) no-repeat 0 0;
     background-position: left center;

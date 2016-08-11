@@ -17,7 +17,9 @@
     <title>nina | 東京・横浜でホームページ制作</title>
   </head>
   <body>
+    <?php include_once("svg-defs.svg"); ?>
     <div class="wrap">
+
       <header>
         <h1>東京・横浜を拠点にホームページ・webサイトといったweb媒体から伝えたい価値を最大化さえるUX/UXデザイナーです。</h1>
       </header>
@@ -34,7 +36,12 @@
       </nav>
       <div class="main">
         <div class="top_inner">
-          <!--<p class="subtitle">brand strategy anddigital creation.</p>-->
+
+          <p class="subtitle">
+            <svg>
+                <use class="test" xlink:href="./css/symbol-defs.svg#main-cache"></use>
+              </svg>
+          </p>
 
           <div class="top-img"></div>
         </div>
