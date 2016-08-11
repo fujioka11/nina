@@ -35,19 +35,11 @@ $chach_txt:15;
     z-index: -1;
     margin-left: (230 / 1080) *100%;
     min-width: 850px;
-
-
-    /*@include widtnPercent( 1080, 850 );
-    background: url(../img/top/img_top.jpg) no-repeat 0 0;
-    padding-bottom: calc(100% * 600 / 850);
-    background-size: 100% auto;
-    z-index: -1;*/
-    /*@include backgroundsize(600, 850);
-    @include widtnPercent( 1080, 850);*/
-    /*width: 860px;
-    height: 100%;*/
-    /*clip: rect(0px, 850px, 600px, 0px);*/
-    //background-size: cover;
-    /*@include backgroundsize(600,850);*/
   }
+}
+
+
+
+.top-contents {
+  margin-top: 50px;
 }

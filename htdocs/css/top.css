@@ -92,15 +92,18 @@ a {
 
 header {
   text-align: right;
-  background: #fff; }
+  background: #fff;
+  width: 97.23%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px 0; }
   header h1 {
     font-weight: normal;
     font-size: 11px;
     font-size: 11px;
     font-size: 1.1rem;
-    line-height: 2.18182;
-    margin-right: 20px;
-    padding: 20px 0 40px; }
+    line-height: 2.18182; }
 
 nav {
   background: #fff none repeat scroll 0 0;
@@ -128,7 +131,6 @@ nav {
 .main {
   margin-left: 300px;
   position: relative;
-  background: #ff0000;
   min-width: 1080px;
   margin-right: 1.85185%;
   /*height: 0px;*/ }
@@ -164,15 +166,7 @@ nav {
     padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: 21.2963%;
-    min-width: 850px;
-    /*@include widtnPercent( 1080, 850 );
-    background: url(../img/top/img_top.jpg) no-repeat 0 0;
-    padding-bottom: calc(100% * 600 / 850);
-    background-size: 100% auto;
-    z-index: -1;*/
-    /*@include backgroundsize(600, 850);
-    @include widtnPercent( 1080, 850);*/
-    /*width: 860px;
-    height: 100%;*/
-    /*clip: rect(0px, 850px, 600px, 0px);*/
-    /*@include backgroundsize(600,850);*/ }
+    min-width: 850px; }
+
+.top-contents {
+  margin-top: 50px; }

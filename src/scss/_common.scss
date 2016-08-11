@@ -34,13 +34,14 @@ a{
 header{
   text-align: right;
   background: #fff;
+  @include widtnPercent(1440,1400);
+  @include center();
+  text-align: right;
+  padding: 20px 0;
 
   h1{
     font-weight: normal;
     @include fts(11);
-    margin-right: 20px;
-
-    padding: 20px 0 40px;
   }
 }
 
@@ -75,7 +76,6 @@ nav{
 .main{
   margin-left: $navwidth + $navleft;
   position: relative;
-  background: #ff0000;
   min-width: $main_size;
   @include parsent(20,1080);
 }
