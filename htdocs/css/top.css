@@ -100,7 +100,7 @@ header {
     font-size: 1.1rem;
     line-height: 2.18182;
     margin-left: 40px;
-    padding: 20px 0; }
+    padding: 20px 0 40px; }
 
 nav {
   background: #fff none repeat scroll 0 0;
@@ -138,6 +138,8 @@ nav {
 /*リンクカラー*/
 /*ボタン*/
 /*ボーダー*/
+/*$h: (194/1235)*10000%)/100;*/
+/*chachテキストの高さ*/
 .top_inner {
   margin: 0 auto;
   width: 100%;
@@ -146,10 +148,9 @@ nav {
   position: relative; }
   .top_inner .subtitle {
     position: absolute;
-    left: 0px;
-    top: 32%;
-    z-index: 2;
-    width: 100%; }
+    left: 60px;
+    top: 35%;
+    z-index: 2; }
     .top_inner .subtitle svg {
       /*width: 800px;*/
       width: 700px;

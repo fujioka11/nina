@@ -1,3 +1,7 @@
+/*$h: (194/1235)*10000%)/100;*/
+/*chachテキストの高さ*/
+$chach_txt:15;
+
 .top_inner {
   margin: 0 auto;
   width: 100%;
@@ -7,10 +11,9 @@
 
   .subtitle{
     position:absolute;
-    left:0px;
-    top:32%;
+    left:60px;
+    top:50%-$chach_txt;
     z-index:2;
-    width: 100%;
 
     svg{
       /*width: 800px;*/
