@@ -151,13 +151,16 @@ nav {
     z-index: 2;
     width: 100%; }
     .top_inner .subtitle svg {
-      width: 50%;
-      fill: #000000; }
+      /*width: 800px;*/
+      width: 700px;
+      fill: #ff0000; }
+    .top_inner .subtitle .defs {
+      display: none; }
   .top_inner .top-img {
     background: url(../img/top/img_top.jpg) no-repeat 0 0;
     background-position: left center;
     background-size: cover;
-    padding-top: calc(100% * 300 / 850);
+    padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: 21.2963%;
     min-width: 850px;
