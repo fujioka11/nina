@@ -91,7 +91,7 @@ a {
   background: #fff; }
 
 header {
-  text-align: left;
+  text-align: right;
   background: #fff; }
   header h1 {
     font-weight: normal;
@@ -99,7 +99,7 @@ header {
     font-size: 11px;
     font-size: 1.1rem;
     line-height: 2.18182;
-    margin-left: 40px;
+    margin-right: 20px;
     padding: 20px 0 40px; }
 
 nav {
@@ -148,7 +148,7 @@ nav {
   position: relative; }
   .top_inner .subtitle {
     position: absolute;
-    left: 60px;
+    left: 0px;
     top: 35%;
     z-index: 2; }
     .top_inner .subtitle svg {
