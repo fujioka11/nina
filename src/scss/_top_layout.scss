@@ -74,9 +74,10 @@ $service-color:#BCEFE4;
 
   .service-title{
     text-align: center;
-    background: #fff;
+    background: #9AD8E0;
     padding: 30px 0;
     border-bottom: 1px solid $service-color;
+
 
     em{
       @include fts(15);
