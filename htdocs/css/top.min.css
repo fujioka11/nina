@@ -198,18 +198,18 @@ nav {
   *zoom: 1;
   background: #08D8A1;
   letter-spacing: -.40em;
-  padding-bottom: 4px; }
+  padding-bottom: 8px; }
   .service-box:after {
     content: "";
     display: table;
     clear: both; }
   .service-box .service-name {
-    width: 24.54%;
+    width: 24.08%;
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
-    margin-top: 4px;
-    margin-left: 0.37%; }
+    margin-top: 8px;
+    margin-left: 0.74%; }
   .service-box .service-title {
     text-align: center;
     background: #fff;
