@@ -52,7 +52,7 @@ $chach_txt:15;
 
 /*service*/
 
-$servive-margin:16px;
+$servive-margin:4px;
 $service-color:#BCEFE4;
 
 .service-box{
@@ -64,12 +64,12 @@ $service-color:#BCEFE4;
   padding-bottom: $servive-margin;
 
   .service-name{
-    @include widtnPercent(1080,250);
+    @include widtnPercent(1080,265);
     display: inline-block;
     vertical-align: top;
     letter-spacing:normal;//隙間消去用
     margin-top: $servive-margin;
-    margin-left: 1.48%;
+    margin-left: 0.37%;
   }
 
   .service-title{
