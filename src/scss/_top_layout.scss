@@ -53,7 +53,7 @@ $chach_txt:15;
 /*service*/
 
 $servive-margin:8px;
-$service-color:#08D8A1;
+$service-color:#DDDDDD;
 
 .service-box{
 
@@ -87,7 +87,7 @@ $service-color:#08D8A1;
       padding-bottom: 23px;
 
       &:before,&:after{
-        background: $service-color;
+        background: #0bb5e6;
         bottom: 9px;
         content: "";
         height: 2px;
