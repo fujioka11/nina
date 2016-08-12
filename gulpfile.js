@@ -15,6 +15,8 @@ var gulp         = require('gulp'),
     sketch      = require("gulp-sketch"),
     imagemin    = require('gulp-imagemin'),
     filelog     = require('gulp-filelog'),
+    cssmin = require('gulp-cssmin'),
+    rename = require('gulp-rename'),
     pleeease = require('gulp-pleeease')
 ;
 
@@ -87,6 +89,8 @@ gulp.task( 'sketchExport:slices', function(){
 
 gulp.task('rubySass', function () {
     gulp.src(paths.scssFiles)
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
         .pipe(plumber())
         .pipe(rubySass({
           r: 'sass-globbing',

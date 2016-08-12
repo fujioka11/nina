@@ -18,9 +18,7 @@ $chach_txt:15;
     svg{
       /*width: 800px;*/
       width: 700px;
-      fill: #ff0000;
     }
-
     .defs{
       display: none;
     }
@@ -38,8 +36,95 @@ $chach_txt:15;
   }
 }
 
-
-
+/*共通*/
 .top-contents {
   margin-top: 50px;
+
+  h3{
+    @include fts(18);
+    margin-bottom: 20px;
+    color: #000;
+  }
+}
+
+/*service*/
+
+.service-box{
+
+  margin-top: $basemt;
+  @include cf();
+  background: $bordercolor;
+  border-top: 1px solid $bordercolor;
+  border-bottom: 1px solid $bordercolor;
+  border-right: 1px solid $bordercolor;
+  letter-spacing: -.40em;//隙間消去用
+
+
+
+  .odd,.even{
+    @include widtnPercent(1080,270);
+    border-left: 1px solid $bordercolor;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing:normal;//隙間消去用
+    /*float: left;*/
+  }
+
+  .service-title{
+    text-align: center;
+    padding: 50px 15px;
+    border-bottom:1px solid $bordercolor;
+
+    em{
+      @include fts(15);
+      font-weight: bold;
+      display: block;
+      position: relative;
+      padding-bottom: 23px;
+
+      &:before,&:after{
+        background: #8bc220;
+        bottom: 9px;
+        content: "";
+        height: 2px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 25px;
+      }
+    }
+
+    span{
+      display: block;
+      @include fts(9);
+      font-weight: normal;
+    }
+  }
+
+  .service-detail{
+    overflow: hidden;
+  }
+
+  .service-detail{
+    padding: 20px 20px 25px;
+    @include fts(13,32);
+    display: flex;
+
+    li{
+      list-style: inside;
+    }
+  }
+
+  .odd{
+    .service-title{
+      background: $bordercolor;
+    }
+
+  }
+
+}
+
+.latest {
+  @include cf();
 }

@@ -1,0 +1,43 @@
+.latest{
+  width: 100%;
+  background: $bordercolor;
+  margin-top: $basemt;
+  @include cf();
+  padding: 0.55% 0 0;
+
+}
+
+.l-topworks{
+  //@mixin widtnPercent( $parentPxWidth, $pxWidth ){
+  @include widtnPercent(1080,352);
+  float: left;
+  background: #fff;
+  padding: 20px;
+  margin-left: 0.55%;
+  margin-bottom: 6px;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+
+  a{
+    color: $txtxcolor;
+    text-decoration: none;
+  }
+
+
+  dl{
+    margin-top: $basemt - 10;
+
+    dd{
+      margin-top: $basemt - 20;
+      @include fts(12,20);
+    }
+  }
+  .workstitle {
+    @include fts(16,28);
+    font-weight: bold;
+  }
+}

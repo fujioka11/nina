@@ -44,6 +44,11 @@
 	/*height: 0px;*/
 }
 
+/*svg管理*/	
+@mixin svgwidth($svgtitle) {
+	width: #{$svgtitle}px;
+	height: 17px;
+}
 
 //h3のテキスト
 @mixin top-h3() {

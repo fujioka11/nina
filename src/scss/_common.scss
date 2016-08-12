@@ -25,6 +25,11 @@ a{
   }
 }
 
+p{
+  color: $txtxcolor;
+  @include fts(14,32);
+}
+
 .wrap {
   width: 100%;
   position: relative;
@@ -34,7 +39,7 @@ a{
 header{
   text-align: right;
   background: #fff;
-  @include widtnPercent(1440,1400);
+  @include widtnPercent(1440,1360);
   @include center();
   text-align: right;
   padding: 20px 0;
@@ -42,6 +47,7 @@ header{
   h1{
     font-weight: normal;
     @include fts(11);
+    display: inline-block;
   }
 }
 
@@ -77,5 +83,11 @@ nav{
   margin-left: $navwidth + $navleft;
   position: relative;
   min-width: $main_size;
-  @include parsent(20,1080);
+  @include parsent(40,1440);
+}
+
+.latest{
+  background: $bordercolor;
+  width: 100%;
+  
 }

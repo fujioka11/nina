@@ -1,0 +1,79 @@
+.topworks {
+
+  float: left;
+  @include widtnPercent(1080,270);
+
+}
+
+figure {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /*background: #333;*/
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    &:after{
+      position: absolute;
+      background: #fff;
+      content: "";
+      display: block;
+      width: 80%;
+      height: 1px;
+      left: 10%;
+      top: 50%;
+      transform: scale(0);
+      transition: all .4s ease-out;
+    }
+
+    &:hover{
+
+      &:after{
+        transform: scale(1);
+      }
+
+      figcaption{
+
+        p,h3{
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      img{
+        opacity: .1;
+        transform: scale(1.2);
+      }
+    }
+
+    img{
+      transition: all .7s ease-out;
+      opacity: 1;
+    }
+}
+
+figcaption{
+
+  p,h3{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    color: #fff;
+    transition: all .4s ease-out .4s;
+  }
+
+  h3{
+    bottom: 51%;
+    transform: translateY(-30px);
+  }
+
+  p{
+    top: 52%;
+    transform: translateY(30px);
+  }
+}
