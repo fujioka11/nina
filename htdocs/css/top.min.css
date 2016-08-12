@@ -196,26 +196,25 @@ nav {
 .service-box {
   margin-top: 30px;
   *zoom: 1;
-  background: #E9E9E9;
-  border-top: 1px solid #E9E9E9;
-  border-bottom: 1px solid #E9E9E9;
-  border-right: 1px solid #E9E9E9;
-  letter-spacing: -.40em; }
+  background: #37DDB8;
+  letter-spacing: -.40em;
+  padding-bottom: 11px; }
   .service-box:after {
     content: "";
     display: table;
     clear: both; }
-  .service-box .odd, .service-box .even {
-    width: 25%;
-    border-left: 1px solid #E9E9E9;
+  .service-box .service-name {
+    width: 23.62%;
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
-    /*float: left;*/ }
+    margin-top: 11px;
+    margin-left: 1.11%; }
   .service-box .service-title {
     text-align: center;
-    padding: 50px 15px;
-    border-bottom: 1px solid #E9E9E9; }
+    background: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid #37DDB8; }
     .service-box .service-title em {
       font-size: 15px;
       font-size: 15px;
@@ -243,7 +242,7 @@ nav {
       line-height: 2.66667;
       font-weight: normal; }
   .service-box .service-detail {
-    overflow: hidden; }
+    background: #fff; }
   .service-box .service-detail {
     padding: 20px 20px 25px;
     font-size: 13px;
@@ -256,8 +255,6 @@ nav {
     display: flex; }
     .service-box .service-detail li {
       list-style: inside; }
-  .service-box .odd .service-title {
-    background: #E9E9E9; }
 
 .latest {
   *zoom: 1; }

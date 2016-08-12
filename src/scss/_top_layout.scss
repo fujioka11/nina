@@ -1,5 +1,8 @@
 /*$h: (194/1235)*10000%)/100;*/
 /*chachテキストの高さ*/
+
+$service-color:#37DDB8;
+
 $chach_txt:15;
 
 .top_inner {
@@ -53,27 +56,24 @@ $chach_txt:15;
 
   margin-top: $basemt;
   @include cf();
-  background: $bordercolor;
-  border-top: 1px solid $bordercolor;
-  border-bottom: 1px solid $bordercolor;
-  border-right: 1px solid $bordercolor;
+  background: $service-color;
   letter-spacing: -.40em;//隙間消去用
+  padding-bottom: 11px;
 
-
-
-  .odd,.even{
-    @include widtnPercent(1080,270);
-    border-left: 1px solid $bordercolor;
+  .service-name{
+    @include widtnPercent(1080,255);
     display: inline-block;
     vertical-align: top;
     letter-spacing:normal;//隙間消去用
-    /*float: left;*/
+    margin-top: 11px;
+    margin-left: 1.11%;
   }
 
   .service-title{
     text-align: center;
-    padding: 50px 15px;
-    border-bottom:1px solid $bordercolor;
+    background: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid $service-color;
 
     em{
       @include fts(15);
@@ -103,7 +103,7 @@ $chach_txt:15;
   }
 
   .service-detail{
-    overflow: hidden;
+    background: #fff;
   }
 
   .service-detail{
@@ -114,13 +114,6 @@ $chach_txt:15;
     li{
       list-style: inside;
     }
-  }
-
-  .odd{
-    .service-title{
-      background: $bordercolor;
-    }
-
   }
 
 }
