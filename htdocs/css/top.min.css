@@ -106,7 +106,7 @@ header {
   margin-left: auto;
   text-align: left;
   padding: 20px 0 30px; }
-  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
     header {
       display: none; } }
   header h1 {
@@ -117,7 +117,7 @@ header {
     line-height: 2.18182;
     display: inline-block; }
 
-@media print, screen and (min-width: 1000px) {
+@media print, screen and (min-width: 1080px) {
   nav {
     background: #fff;
     min-height: 280px;
@@ -127,59 +127,73 @@ header {
     width: 160px;
     z-index: 1;
     padding: 40px 0px; } }
-@media print, screen and (min-width: 480px) and (max-width: 999px) {
+@media print, screen and (min-width: 480px) and (max-width: 1079px) {
   nav {
-    width: 95%;
-    height: 100px;
+    width: 100%;
+    height: 86px;
     margin-right: auto;
-    margin-left: auto; } }
+    margin-left: auto;
+    padding-top: 20px; } }
 nav .logo {
   height: 40px;
   width: 120px; }
-  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
     nav .logo {
       position: absolute;
-      left: 20px;
-      top: 20px; } }
+      left: 50%;
+      margin-left: -60px; } }
   nav .logo img {
     margin: 0;
     padding: 0; }
 nav a {
   color: #444; }
-@media print, screen and (min-width: 1000px) {
+@media print, screen and (min-width: 1080px) {
   nav .main-navi {
     margin: 35px 0 20px; } }
-@media print, screen and (min-width: 480px) and (max-width: 999px) {
+@media print, screen and (min-width: 480px) and (max-width: 1079px) {
   nav .main-navi {
-    width: 78.13%;
+    z-index: 100;
     position: absolute;
-    right: 0;
-    top: 30px; } }
+    top: 87px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(106, 106, 106, 0.5);
+    display: none;
+    width: 100%; } }
 nav .main-navi li {
   font-size: 13px;
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 2.61538; }
-  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
     nav .main-navi li {
-      display: inline;
-      margin-left: 8%; } }
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 2.125; } }
   nav .main-navi li a {
     font-weight: bold; }
+    @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+      nav .main-navi li a {
+        padding: 25px;
+        display: block;
+        border-top: 1px solid #E9E9E9; } }
 
-@media print, screen and (min-width: 480px) and (max-width: 999px) {
+@media print, screen and (min-width: 480px) and (max-width: 1079px) {
   .request {
     position: absolute;
-    right: 0; }
+    right: 20;
+    width: 18.23%;
+    text-align: center; }
     .request a {
       display: block;
       background: #FFD85A;
-      padding: 10px 30px; }
+      padding: 5px 0;
+      border-radius: 6px;
+      box-shadow: 0px 1px 2px 0px rgba(106, 106, 106, 0.5); }
       .request a .icon {
         display: none; }
       .request a:hover {
         background: #f1f1f1; } }
-@media print, screen and (min-width: 1000px) {
+@media print, screen and (min-width: 1080px) {
   .request {
     width: 100%;
     font-size: 12px;
@@ -200,37 +214,7 @@ nav .main-navi li {
       .request a:hover {
         background: #f1f1f1; } }
 
-/*
-.request {
-  width: 150px;
-  @include fts(12);
-
-  a{
-    background: $btcolor;
-    display: block;
-    color: #fff;
-    font-weight: bold;
-    padding: 4px 0 4px 15px;
-    position: relative;
-
-    &:hover{
-      background: #FFD85A;
-    }
-
-    .icon{
-      width: $iconwidth/2;
-      height: $iconwidth/2;
-      fill:#fff;
-      position: absolute;
-      top: 50%;
-      margin-top: -$iconwidth/4;
-      right: 10px;
-    }
-  }
-
-
-}*/
-@media print, screen and (min-width: 1000px) {
+@media print, screen and (min-width: 1080px) {
   .main {
     margin-left: 300px;
     position: relative;
@@ -241,6 +225,52 @@ nav .main-navi li {
 .latest {
   background: #E9E9E9;
   width: 100%; }
+
+@media print, screen and (min-width: 1080px) {
+  .nav-toggle {
+    display: none; } }
+@media print, screen and (min-width: 480px) and (max-width: 1079px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 31px;
+    left: 20px; } }
+.nav-toggle .menu-trigger, .nav-toggle .menu-trigger span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  box-sizing: border-box; }
+.nav-toggle .menu-trigger {
+  position: relative;
+  width: 32px;
+  height: 26px; }
+  .nav-toggle .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px; }
+.nav-toggle .menu-trigger span:nth-of-type(1) {
+  top: 0; }
+.nav-toggle .menu-trigger span:nth-of-type(2) {
+  top: 11px; }
+.nav-toggle .menu-trigger span:nth-of-type(3) {
+  bottom: 0; }
+
+.menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(11px) rotate(-45deg);
+  -ms-transform: translateY(11px) rotate(-45deg);
+  transform: translateY(11px) rotate(-45deg); }
+
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
+
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-11px) rotate(45deg);
+  -ms-transform: translateY(-11px) rotate(45deg);
+  transform: translateY(-11px) rotate(45deg); }
 
 .mt15 {
   margin-top: 15px; }
@@ -258,9 +288,16 @@ nav .main-navi li {
     left: 40px;
     top: 35%;
     z-index: 2; }
+    @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+      .top_inner .subtitle {
+        left: 20px;
+        top: 30%; } }
     .top_inner .subtitle svg {
       /*width: 800px;*/
       width: 700px; }
+      @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+        .top_inner .subtitle svg {
+          width: 600px; } }
     .top_inner .subtitle .defs {
       display: none; }
   .top_inner .top-img {
@@ -275,9 +312,9 @@ nav .main-navi li {
 /*共通*/
 .top-contents {
   margin-top: 50px; }
-  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
     .top-contents {
-      width: 91.15%;
+      width: 94.8%;
       margin-right: auto;
       margin-left: auto; } }
   .top-contents h3 {

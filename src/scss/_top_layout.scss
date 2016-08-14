@@ -2,10 +2,10 @@
 /*chachテキストの高さ*/
 
 $service-color:#37DDB8;
-
 $chach_txt:15;
 
 .top_inner {
+
   margin: 0 auto;
   width: 100%;
   text-align: left;
@@ -13,14 +13,27 @@ $chach_txt:15;
   position: relative;
 
   .subtitle{
+
     position:absolute;
     left:40px;
     top:50%-$chach_txt;
     z-index:2;
 
+    @include respond(md){
+
+      left:20px;
+      top:50%-20;
+
+    }
+
     svg{
       /*width: 800px;*/
       width: 700px;
+
+      @include respond(md){
+        width:600px;
+      }
+
     }
     .defs{
       display: none;
@@ -29,6 +42,7 @@ $chach_txt:15;
 
 
   .top-img{
+
     background: url(../img/top/img_top.jpg) no-repeat 0 0;
     background-position:left center;
     background-size:cover;
@@ -36,32 +50,42 @@ $chach_txt:15;
     z-index: -1;
     margin-left: (230 / 1080) *100%;
     min-width: 480px;
+
   }
 }
 
 /*共通*/
 .top-contents {
+
   margin-top: 50px;
 
   @include respond(md){
-    @include widtnPercent(768,700);
+
+    @include widtnPercent(768,728);
     @include center();
+
   };
 
   h3{
+
     @include fts(13);
     margin-bottom: 20px;
     color: #000;
+
   }
 
   .main-chach {
+
     @include fts(16,32);
     margin-bottom: 5px;
 
   }
+
   p{
+
     @include fts(14,33);
     @include widtnPercent(1100,1050);
+
   }
 }
 

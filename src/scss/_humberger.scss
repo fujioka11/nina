@@ -1,0 +1,58 @@
+$circlewidth:11px;
+
+.nav-toggle{
+
+  @include respond(pc){
+    display: none;
+  }
+
+  @include respond(md){
+    display: block;
+    position:absolute;
+    top:31px;
+    left:20px;
+  }
+
+  .menu-trigger,.menu-trigger span{
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+
+  .menu-trigger{
+    position: relative;
+    width: 32px;
+    height: 26px;
+
+    span{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+    }
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: $circlewidth;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY($circlewidth) rotate(-45deg);
+	transform: translateY($circlewidth) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-$circlewidth) rotate(45deg);
+	transform: translateY(-$circlewidth) rotate(45deg);
+}
