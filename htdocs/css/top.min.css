@@ -4,6 +4,7 @@
 /*リンクカラー*/
 /*ボタン*/
 /*ボーダー*/
+/*アイコン*/
 /*マージン*/
 /* Reset Style */
 html {
@@ -82,10 +83,8 @@ li {
   list-style: none; }
 
 a {
-  color: #28657E;
+  color: #37DDB8;
   text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
 
 p {
   color: #5A5A5A;
@@ -105,8 +104,8 @@ header {
   width: 94.45%;
   margin-right: auto;
   margin-left: auto;
-  text-align: right;
-  padding: 20px 0; }
+  text-align: left;
+  padding: 20px 0 30px; }
   header h1 {
     font-weight: normal;
     font-size: 11px;
@@ -116,32 +115,61 @@ header {
     display: inline-block; }
 
 nav {
-  background: #fff none repeat scroll 0 0;
+  background: #fff;
   min-height: 280px;
   position: fixed;
-  left: 0px;
-  top: 46px;
+  left: 2.77%;
+  top: 60px;
   width: 260px;
   z-index: 1;
-  padding: 40px; }
+  padding: 40px 0px; }
   nav a {
     color: #444; }
-  nav ul {
-    margin: 35px 0; }
-    nav ul li {
-      font-size: 14px;
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 2.42857; }
-  nav .request {
-    margin-right: 40px; }
-    nav .request a {
-      color: #EB980E; }
+  nav .main-navi {
+    margin: 35px 0 20px; }
+    nav .main-navi li {
+      font-size: 13px;
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 2.61538; }
+      nav .main-navi li a {
+        font-weight: bold; }
+  nav .sns-navi li {
+    font-size: 12px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 2.33333; }
+  nav .sns-navi a {
+    text-decoration: underline; }
+
+.request {
+  width: 150px;
+  font-size: 12px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 2; }
+  .request a {
+    background: #37DDB8;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 0 4px 15px;
+    position: relative; }
+    .request a:hover {
+      background: #FFD85A; }
+    .request a .icon {
+      width: 15px;
+      height: 15px;
+      fill: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -7.5px;
+      right: 10px; }
 
 .main {
   margin-left: 300px;
   position: relative;
-  min-width: 1080px;
+  min-width: 768px;
   margin-right: 2.77778%;
   /*height: 0px;*/ }
 
@@ -179,16 +207,16 @@ nav {
     padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: 21.2963%;
-    min-width: 850px; }
+    min-width: 480px; }
 
 /*共通*/
 .top-contents {
   margin-top: 50px; }
   .top-contents h3 {
-    font-size: 18px;
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1.33333;
+    font-size: 12px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 2;
     margin-bottom: 20px;
     color: #000; }
 
@@ -196,7 +224,7 @@ nav {
 .service-box {
   margin-top: 30px;
   *zoom: 1;
-  background: #DDDDDD;
+  background: #9AD8E0;
   letter-spacing: -.40em;
   padding-bottom: 8px; }
   .service-box:after {
@@ -214,7 +242,7 @@ nav {
     text-align: center;
     background: #fff;
     padding: 30px 0;
-    border-bottom: 1px solid #DDDDDD; }
+    border-bottom: 1px solid #f1f1f1; }
     .service-box .service-title em {
       font-size: 15px;
       font-size: 15px;
@@ -225,7 +253,7 @@ nav {
       position: relative;
       padding-bottom: 23px; }
       .service-box .service-title em:before, .service-box .service-title em:after {
-        background: #0bb5e6;
+        background: #00C793;
         bottom: 9px;
         content: "";
         height: 2px;
@@ -257,32 +285,39 @@ nav {
       list-style: inside; }
 
 .latest {
-  *zoom: 1; }
-  .latest:after {
-    content: "";
-    display: table;
-    clear: both; }
+  background: #fff;
+  overflow: hidden;
+  letter-spacing: -.40em;
+  margin-left: -0.18%;
+  margin-top: -2px; }
 
 .topworks {
-  float: left;
-  width: 25%; }
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  width: 33.1%;
+  margin-left: 0.18%;
+  margin-top: 2px; }
 
 figure {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  letter-spacing: normal;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   /*background: #333;*/ }
   figure img {
     width: 100%;
     height: auto; }
   figure:after {
     position: absolute;
-    background: #fff;
+    background: #DADADA;
     content: "";
     display: block;
-    width: 80%;
+    width: 50%;
     height: 1px;
-    left: 10%;
+    left: 25%;
     top: 50%;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -293,40 +328,53 @@ figure {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-  figure:hover figcaption p, figure:hover figcaption h3 {
+  figure:hover figcaption p, figure:hover figcaption h4 {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0); }
   figure:hover img {
-    opacity: .1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    opacity: .05;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
   figure img {
-    -webkit-transition: all .7s ease-out;
-    transition: all .7s ease-out;
+    -webkit-transition: all .8s ease-out;
+    transition: all .8s ease-out;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 
-figcaption p, figcaption h3 {
+figcaption p, figcaption h4 {
   position: absolute;
   text-align: center;
   width: 100%;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  color: #fff;
-  -webkit-transition: all .4s ease-out .4s;
-  transition: all .4s ease-out .4s; }
-figcaption h3 {
-  bottom: 51%;
+  color: #444;
+  -webkit-transition: all .2s ease-out .2s;
+  transition: all .2s ease-out .2s; }
+figcaption h4 {
+  bottom: 54%;
   -webkit-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
-  transform: translateY(-30px); }
+  transform: translateY(-30px);
+  font-size: 15px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.73333;
+  width: 80%;
+  left: 10%; }
 figcaption p {
-  top: 52%;
+  top: 54%;
+  font-size: 12px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 2;
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
-  transform: translateY(30px); }
+  transform: translateY(30px);
+  width: 60%;
+  left: 20%;
+  color: #686868; }

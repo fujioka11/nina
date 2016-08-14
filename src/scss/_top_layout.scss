@@ -35,7 +35,7 @@ $chach_txt:15;
     padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: (230 / 1080) *100%;
-    min-width: 850px;
+    min-width: 480px;
   }
 }
 
@@ -44,7 +44,7 @@ $chach_txt:15;
   margin-top: 50px;
 
   h3{
-    @include fts(18);
+    @include fts(12);
     margin-bottom: 20px;
     color: #000;
   }
@@ -53,13 +53,13 @@ $chach_txt:15;
 /*service*/
 
 $servive-margin:8px;
-$service-color:#DDDDDD;
+$service-color:#f1f1f1;
 
 .service-box{
 
   margin-top: $basemt;
   @include cf();
-  background: $service-color;
+  background: #9AD8E0;
   letter-spacing: -.40em;//隙間消去用
   padding-bottom: $servive-margin;
 
@@ -87,7 +87,7 @@ $service-color:#DDDDDD;
       padding-bottom: 23px;
 
       &:before,&:after{
-        background: #0bb5e6;
+        background: #00C793;
         bottom: 9px;
         content: "";
         height: 2px;
@@ -120,8 +120,4 @@ $service-color:#DDDDDD;
     }
   }
 
-}
-
-.latest {
-  @include cf();
 }

@@ -14,6 +14,7 @@
   margin-left: auto;
 }
 
+
 //パーセント
 @mixin widtnPercent( $parentPxWidth, $pxWidth ){
     width: ceil((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
@@ -44,7 +45,7 @@
 	/*height: 0px;*/
 }
 
-/*svg管理*/	
+/*svg管理*/
 @mixin svgwidth($svgtitle) {
 	width: #{$svgtitle}px;
 	height: 17px;
@@ -52,7 +53,7 @@
 
 //h3のテキスト
 @mixin top-h3() {
-	@include fts(20);
+	@include fts(12);
 	color: $basecolor;
 }
 
@@ -60,9 +61,6 @@
 	@include fts(14);
 	color: $txtxcolor;
 }
-
-
-
 
 //グラデ
 @mixin gradient-top-lighten($color:#E8E8E8, $lighten:7%){

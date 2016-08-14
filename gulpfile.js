@@ -19,6 +19,7 @@ var gulp         = require('gulp'),
     rename = require('gulp-rename'),
     pleeease = require('gulp-pleeease')
 ;
+var $ = require('gulp-load-plugins')();
 
 /***************************************************************************
 * FILE DESTINATIONS
@@ -43,9 +44,11 @@ var paths = {
 
 // sketch
   srcDir  : './src/sketch',
-  dstDir : './src/sketch/exports',
+  dstDir : './htdocs/img/thumnail',
 
 }
+
+
 // Static server
 gulp.task('browser-sync', function() {
   browserSync({
@@ -63,7 +66,7 @@ gulp.task('bs-reload', function() {
 
 
 gulp.task( 'sketchExport:slices', function(){
-  var srcGlob    = paths.srcDir + '/*.sketch';
+  var srcGlob    = paths.srcDir + '/thumnail.sketch';
   var dstGlob    = paths.dstDir;
 
   var sketchOptions = {
@@ -108,6 +111,30 @@ gulp.task('rubySass', function () {
 
 });
 
+//svg管理
+gulp.task('svg', function () {
+  gulp.src('htdocs/svg/icons/*.svg')
+    .pipe($.svgmin())
+    .pipe($.svgstore({ inlineSvg: true }))
+    .pipe($.cheerio({
+      run: function ($, file) {
+          $('svg').addClass('hide');
+          $('[fill]').removeAttr('fill');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(gulp.dest('htdocs/svg'));
+});
+
+gulp.task('svg2png', function () {
+  gulp.src('htdocs/svg/icons/*.svg')
+    .pipe($.svg2png(3))
+    .pipe($.rename({ prefix: "icons.svg." }))
+    .pipe($.imagemin())
+    .pipe(gulp.dest('htdocs/svg'));
+});
+
+
 /***************************************************************************
 * gulp tasks
 ***************************************************************************/
@@ -123,6 +150,8 @@ gulp.task('default', [
     'browser-sync',
     'bs-reload',
     'rubySass',
+    'svg',
+    'svg2png',
     'watch'
 ]);
 

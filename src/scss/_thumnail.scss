@@ -1,7 +1,22 @@
-.topworks {
+.latest {
+  //@include cf();
+  background: #fff;
+  overflow: hidden;
+  letter-spacing: -.40em;
+  margin-left: -0.18%;
+  margin-top: -2px;
+  //@include cf();
+}
 
-  float: left;
-  @include widtnPercent(1080,270);
+.topworks {
+  display: inline-block;
+  vertical-align: top;
+
+  letter-spacing: normal;
+  @include widtnPercent(1100,364);//3列で表示
+  margin-left: 0.18%;
+  margin-top: 2px;
+
 
 }
 
@@ -9,7 +24,11 @@ figure {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    letter-spacing:normal;
+    -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+   clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
     /*background: #333;*/
+
 
     img{
       width: 100%;
@@ -18,12 +37,12 @@ figure {
 
     &:after{
       position: absolute;
-      background: #fff;
+      background: #DADADA;
       content: "";
       display: block;
-      width: 80%;
+      width: 50%;
       height: 1px;
-      left: 10%;
+      left: 25%;
       top: 50%;
       transform: scale(0);
       transition: all .4s ease-out;
@@ -37,43 +56,52 @@ figure {
 
       figcaption{
 
-        p,h3{
+        p,h4{
           opacity: 1;
           transform: translateY(0);
         }
-
       }
 
       img{
-        opacity: .1;
+        opacity: .05;
         transform: scale(1.2);
       }
+
     }
 
     img{
-      transition: all .7s ease-out;
+      transition: all .8s ease-out;
       opacity: 1;
     }
+
 }
 
 figcaption{
 
-  p,h3{
+  p,h4{
     position: absolute;
     text-align: center;
     width: 100%;
     opacity: 0;
-    color: #fff;
-    transition: all .4s ease-out .4s;
+    color: $basecolor;
+    transition: all .2s ease-out .2s;
   }
 
-  h3{
-    bottom: 51%;
+  h4{
+    bottom: 54%;
     transform: translateY(-30px);
+    @include fts(15,26);
+    width: 80%;
+    left: 10%;
   }
 
   p{
-    top: 52%;
+    top: 54%;
+    @include fts(12);
     transform: translateY(30px);
+    width: 60%;
+    left: 20%;
+    color: #686868;
+
   }
 }
