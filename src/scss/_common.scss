@@ -54,9 +54,23 @@ nav{
   position: fixed;
   left: 2.77%;
   top: 60px;
-  width: $navwidth;
+  width: $navwidth - 100;
   z-index: 1;
   padding: 40px 0px;
+
+  h2{
+    width: 100%;
+  }
+
+  .logo{
+
+    width: 100%;
+
+    img{
+      width: $navwidth - 100;
+
+    }
+  }
 
   a{
     color:$basecolor;
@@ -72,17 +86,6 @@ nav{
       a{
         font-weight: bold;
       }
-    }
-  }
-
-  .sns-navi {
-
-
-    li{
-      @include fts(12,28);
-    }
-    a{
-      text-decoration: underline;
     }
   }
 }

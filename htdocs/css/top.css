@@ -4,7 +4,6 @@
 /*リンクカラー*/
 /*ボタン*/
 /*ボーダー*/
-/*アイコン*/
 /*マージン*/
 /* Reset Style */
 html {
@@ -83,8 +82,10 @@ li {
   list-style: none; }
 
 a {
-  color: #37DDB8;
+  color: #28657E;
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 p {
   color: #5A5A5A;
@@ -104,8 +105,8 @@ header {
   width: 94.45%;
   margin-right: auto;
   margin-left: auto;
-  text-align: left;
-  padding: 20px 0 30px; }
+  text-align: right;
+  padding: 20px 0; }
   header h1 {
     font-weight: normal;
     font-size: 11px;
@@ -115,60 +116,32 @@ header {
     display: inline-block; }
 
 nav {
-  background: #fff;
+  background: #fff none repeat scroll 0 0;
   min-height: 280px;
   position: fixed;
-  left: 2.77%;
-  top: 60px;
-  width: 160px;
+  left: 0px;
+  top: 46px;
+  width: 260px;
   z-index: 1;
-  padding: 40px 0px; }
-  nav h2 {
-    width: 100%; }
-  nav .logo {
-    width: 100%; }
-    nav .logo img {
-      width: 160px; }
+  padding: 40px; }
   nav a {
     color: #444; }
-  nav .main-navi {
-    margin: 35px 0 20px; }
-    nav .main-navi li {
-      font-size: 13px;
-      font-size: 13px;
-      font-size: 1.3rem;
-      line-height: 2.61538; }
-      nav .main-navi li a {
-        font-weight: bold; }
-
-.request {
-  width: 150px;
-  font-size: 12px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 2; }
-  .request a {
-    background: #37DDB8;
-    display: block;
-    color: #fff;
-    font-weight: bold;
-    padding: 4px 0 4px 15px;
-    position: relative; }
-    .request a:hover {
-      background: #FFD85A; }
-    .request a .icon {
-      width: 15px;
-      height: 15px;
-      fill: #fff;
-      position: absolute;
-      top: 50%;
-      margin-top: -7.5px;
-      right: 10px; }
+  nav ul {
+    margin: 35px 0; }
+    nav ul li {
+      font-size: 14px;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 2.42857; }
+  nav .request {
+    margin-right: 40px; }
+    nav .request a {
+      color: #EB980E; }
 
 .main {
   margin-left: 300px;
   position: relative;
-  min-width: 768px;
+  min-width: 1080px;
   margin-right: 2.77778%;
   /*height: 0px;*/ }
 
@@ -206,16 +179,16 @@ nav {
     padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: 21.2963%;
-    min-width: 480px; }
+    min-width: 850px; }
 
 /*共通*/
 .top-contents {
   margin-top: 50px; }
   .top-contents h3 {
-    font-size: 12px;
-    font-size: 12px;
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: 18px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.33333;
     margin-bottom: 20px;
     color: #000; }
 
@@ -223,25 +196,26 @@ nav {
 .service-box {
   margin-top: 30px;
   *zoom: 1;
-  background: #9AD8E0;
-  letter-spacing: -.40em;
-  padding-bottom: 8px; }
+  background: #E9E9E9;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
+  border-right: 1px solid #E9E9E9;
+  letter-spacing: -.40em; }
   .service-box:after {
     content: "";
     display: table;
     clear: both; }
-  .service-box .service-name {
-    width: 24.08%;
+  .service-box .odd, .service-box .even {
+    width: 25%;
+    border-left: 1px solid #E9E9E9;
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
-    margin-top: 8px;
-    margin-left: 0.74%; }
+    /*float: left;*/ }
   .service-box .service-title {
     text-align: center;
-    background: #fff;
-    padding: 30px 0;
-    border-bottom: 1px solid #f1f1f1; }
+    padding: 50px 15px;
+    border-bottom: 1px solid #E9E9E9; }
     .service-box .service-title em {
       font-size: 15px;
       font-size: 15px;
@@ -252,7 +226,7 @@ nav {
       position: relative;
       padding-bottom: 23px; }
       .service-box .service-title em:before, .service-box .service-title em:after {
-        background: #00C793;
+        background: #8bc220;
         bottom: 9px;
         content: "";
         height: 2px;
@@ -269,57 +243,49 @@ nav {
       line-height: 2.66667;
       font-weight: normal; }
   .service-box .service-detail {
-    background: #fff; }
+    overflow: hidden; }
   .service-box .service-detail {
     padding: 20px 20px 25px;
     font-size: 13px;
     font-size: 13px;
     font-size: 1.3rem;
-    line-height: 1.69231;
+    line-height: 2.46154;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    .service-box .service-detail ul {
-      margin-top: -5px; }
     .service-box .service-detail li {
-      list-style: inside;
-      margin-top: 5px; }
+      list-style: inside; }
+  .service-box .odd .service-title {
+    background: #E9E9E9; }
 
 .latest {
-  background: #fff;
-  overflow: hidden;
-  letter-spacing: -.40em;
-  margin-left: -0.18%;
-  margin-top: -2px; }
+  *zoom: 1; }
+  .latest:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .topworks {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  width: 33.1%;
-  margin-left: 0.18%;
-  margin-top: 2px; }
+  float: left;
+  width: 25%; }
 
 figure {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  letter-spacing: normal;
-  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   /*background: #333;*/ }
   figure img {
     width: 100%;
     height: auto; }
   figure:after {
     position: absolute;
-    background: #DADADA;
+    background: #fff;
     content: "";
     display: block;
-    width: 50%;
+    width: 80%;
     height: 1px;
-    left: 25%;
+    left: 10%;
     top: 50%;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -330,53 +296,40 @@ figure {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-  figure:hover figcaption p, figure:hover figcaption h4 {
+  figure:hover figcaption p, figure:hover figcaption h3 {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0); }
   figure:hover img {
-    opacity: .05;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+    opacity: .1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
   figure img {
-    -webkit-transition: all .8s ease-out;
-    transition: all .8s ease-out;
+    -webkit-transition: all .7s ease-out;
+    transition: all .7s ease-out;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 
-figcaption p, figcaption h4 {
+figcaption p, figcaption h3 {
   position: absolute;
   text-align: center;
   width: 100%;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  color: #444;
-  -webkit-transition: all .2s ease-out .2s;
-  transition: all .2s ease-out .2s; }
-figcaption h4 {
-  bottom: 54%;
+  color: #fff;
+  -webkit-transition: all .4s ease-out .4s;
+  transition: all .4s ease-out .4s; }
+figcaption h3 {
+  bottom: 51%;
   -webkit-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
-  font-size: 15px;
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 1.73333;
-  width: 80%;
-  left: 10%; }
+  transform: translateY(-30px); }
 figcaption p {
-  top: 54%;
-  font-size: 12px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 2;
+  top: 52%;
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
-  transform: translateY(30px);
-  width: 60%;
-  left: 20%;
-  color: #686868; }
+  transform: translateY(30px); }
