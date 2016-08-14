@@ -43,10 +43,25 @@ $chach_txt:15;
 .top-contents {
   margin-top: 50px;
 
+  @include respond(md){
+    @include widtnPercent(768,700);
+    @include center();
+  };
+
   h3{
-    @include fts(12);
+    @include fts(13);
     margin-bottom: 20px;
     color: #000;
+  }
+
+  .main-chach {
+    @include fts(16,32);
+    margin-bottom: 5px;
+
+  }
+  p{
+    @include fts(14,33);
+    @include widtnPercent(1100,1050);
   }
 }
 
@@ -59,7 +74,7 @@ $service-color:#f1f1f1;
 
   margin-top: $basemt;
   @include cf();
-  background: #9AD8E0;
+  background: #f1f1f1;
   letter-spacing: -.40em;//隙間消去用
   padding-bottom: $servive-margin;
 

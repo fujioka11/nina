@@ -106,6 +106,9 @@ header {
   margin-left: auto;
   text-align: left;
   padding: 20px 0 30px; }
+  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+    header {
+      display: none; } }
   header h1 {
     font-weight: normal;
     font-size: 11px;
@@ -114,73 +117,134 @@ header {
     line-height: 2.18182;
     display: inline-block; }
 
-nav {
-  background: #fff;
-  min-height: 280px;
-  position: fixed;
-  left: 2.77%;
-  top: 60px;
-  width: 160px;
-  z-index: 1;
-  padding: 40px 0px; }
-  nav .logo {
-    height: 40px;
-    width: 120px; }
-    nav .logo img {
-      margin: 0;
-      padding: 0; }
-  nav a {
-    color: #444; }
+@media print, screen and (min-width: 1000px) {
+  nav {
+    background: #fff;
+    min-height: 280px;
+    position: fixed;
+    left: 2.77%;
+    top: 60px;
+    width: 160px;
+    z-index: 1;
+    padding: 40px 0px; } }
+@media print, screen and (min-width: 480px) and (max-width: 999px) {
+  nav {
+    width: 95%;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto; } }
+nav .logo {
+  height: 40px;
+  width: 120px; }
+  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+    nav .logo {
+      position: absolute;
+      left: 20px;
+      top: 20px; } }
+  nav .logo img {
+    margin: 0;
+    padding: 0; }
+nav a {
+  color: #444; }
+@media print, screen and (min-width: 1000px) {
   nav .main-navi {
-    margin: 35px 0 20px; }
+    margin: 35px 0 20px; } }
+@media print, screen and (min-width: 480px) and (max-width: 999px) {
+  nav .main-navi {
+    width: 78.13%;
+    position: absolute;
+    right: 0;
+    top: 30px; } }
+nav .main-navi li {
+  font-size: 13px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 2.61538; }
+  @media print, screen and (min-width: 480px) and (max-width: 999px) {
     nav .main-navi li {
-      font-size: 13px;
-      font-size: 13px;
-      font-size: 1.3rem;
-      line-height: 2.61538; }
-      nav .main-navi li a {
-        font-weight: bold; }
+      display: inline;
+      margin-left: 8%; } }
+  nav .main-navi li a {
+    font-weight: bold; }
 
+@media print, screen and (min-width: 480px) and (max-width: 999px) {
+  .request {
+    position: absolute;
+    right: 0; }
+    .request a {
+      display: block;
+      background: #FFD85A;
+      padding: 10px 30px; }
+      .request a .icon {
+        display: none; }
+      .request a:hover {
+        background: #f1f1f1; } }
+@media print, screen and (min-width: 1000px) {
+  .request {
+    width: 100%;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 2;
+    position: relative; }
+    .request a {
+      display: block;
+      background: #FFD85A;
+      padding: 10px 0 10px 15px; }
+      .request a .icon {
+        width: 15px;
+        height: 15px;
+        fill: #5A5A5A;
+        position: absolute;
+        right: 10px;
+        top: 15px; }
+      .request a:hover {
+        background: #f1f1f1; } }
+
+/*
 .request {
   width: 150px;
-  font-size: 12px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 2; }
-  .request a {
-    background: #37DDB8;
+  @include fts(12);
+
+  a{
+    background: $btcolor;
     display: block;
     color: #fff;
     font-weight: bold;
     padding: 4px 0 4px 15px;
-    position: relative; }
-    .request a:hover {
-      background: #FFD85A; }
-    .request a .icon {
-      width: 15px;
-      height: 15px;
-      fill: #fff;
+    position: relative;
+
+    &:hover{
+      background: #FFD85A;
+    }
+
+    .icon{
+      width: $iconwidth/2;
+      height: $iconwidth/2;
+      fill:#fff;
       position: absolute;
       top: 50%;
-      margin-top: -7.5px;
-      right: 10px; }
+      margin-top: -$iconwidth/4;
+      right: 10px;
+    }
+  }
 
-.main {
-  margin-left: 300px;
-  position: relative;
-  min-width: 768px;
-  margin-right: 2.77778%;
-  /*height: 0px;*/ }
+
+}*/
+@media print, screen and (min-width: 1000px) {
+  .main {
+    margin-left: 300px;
+    position: relative;
+    min-width: 768px;
+    margin-right: 2.77778%;
+    /*height: 0px;*/ } }
 
 .latest {
   background: #E9E9E9;
   width: 100%; }
 
-/*キーカラー*/
-/*フォントカラー*/
-/*リンクカラー*/
-/*ボタン*/
-/*ボーダー*/
+.mt15 {
+  margin-top: 15px; }
+
 /*$h: (194/1235)*10000%)/100;*/
 /*chachテキストの高さ*/
 .top_inner {
@@ -211,19 +275,36 @@ nav {
 /*共通*/
 .top-contents {
   margin-top: 50px; }
+  @media print, screen and (min-width: 480px) and (max-width: 999px) {
+    .top-contents {
+      width: 91.15%;
+      margin-right: auto;
+      margin-left: auto; } }
   .top-contents h3 {
-    font-size: 12px;
-    font-size: 12px;
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: 13px;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.84615;
     margin-bottom: 20px;
     color: #000; }
+  .top-contents .main-chach {
+    font-size: 16px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-bottom: 5px; }
+  .top-contents p {
+    font-size: 14px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 2.35714;
+    width: 95.46%; }
 
 /*service*/
 .service-box {
   margin-top: 30px;
   *zoom: 1;
-  background: #9AD8E0;
+  background: #f1f1f1;
   letter-spacing: -.40em;
   padding-bottom: 8px; }
   .service-box:after {
@@ -377,6 +458,8 @@ figcaption p {
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
   transform: translateY(30px);
-  width: 60%;
-  left: 20%;
-  color: #686868; }
+  width: 70% !important;
+  left: 50%;
+  margin-left: -35%;
+  color: #686868;
+  text-align: center; }

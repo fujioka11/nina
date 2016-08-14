@@ -41,6 +41,11 @@ header{
   text-align: left;
   padding: 20px 0 30px;
 
+  @include respond(md){
+    display: none;
+
+  };
+
   h1{
     font-weight: normal;
     @include fts(11);
@@ -49,6 +54,9 @@ header{
 }
 
 nav{
+
+  @include respond(pc){
+
   background: #fff;
   min-height: 280px;
   position: fixed;
@@ -58,11 +66,24 @@ nav{
   z-index: 1;
   padding: 40px 0px;
 
+}
+
+  @include respond(md){
+    width:95%;
+    height:100px;
+    @include center();
+  }
+
   .logo{
 
     height: 40px;
     width: 120px;
 
+    @include respond(md){
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
     img{
       margin: 0;
       padding: 0;
@@ -74,11 +95,25 @@ nav{
   }
 
   .main-navi{
-
-    margin: 35px 0 20px;
+    @include respond(pc){
+      margin: 35px 0 20px;
+    }
+    @include respond(md){
+      @include widtnPercent(768,600);
+      position: absolute;
+      right: 0;
+      top:30px;
+    }
 
     li{
       @include fts(13,34);
+
+      @include respond(md){
+        display: inline;
+        margin-left: 8%;
+      }
+
+
 
       a{
         font-weight: bold;
@@ -87,6 +122,61 @@ nav{
   }
 }
 
+.request {
+
+  @include respond(md){
+    position: absolute;
+    right: 0;
+
+    a{
+      display: block;
+      background: $btcolor;
+      padding: 10px 30px;
+
+      .icon{
+        display: none;
+      }
+
+      &:hover{
+        background: #f1f1f1;
+      }
+    }
+  }
+
+
+
+  @include respond(pc){
+
+    width: 100%;
+    @include fts(12);
+    position: relative;
+
+    a{
+      display: block;
+      background: $btcolor;
+      padding: 10px 0 10px 15px;
+
+      .icon{
+        width: $iconwidth/2;
+        height: $iconwidth/2;
+        fill:$txtxcolor;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
+
+      &:hover{
+        background: #f1f1f1;
+      }
+    }
+
+  }
+
+
+
+}
+
+/*
 .request {
   width: 150px;
   @include fts(12);
@@ -115,14 +205,18 @@ nav{
   }
 
 
-}
+}*/
 
 
 .main{
-  margin-left: $navwidth + $navleft;
-  position: relative;
-  min-width: 768px;
-  @include parsent(40,1440);
+
+  @include respond(pc){
+    margin-left: $navwidth + $navleft;
+    position: relative;
+    min-width: 768px;
+    @include parsent(40,1440);
+  }
+
 }
 
 .latest{
