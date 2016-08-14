@@ -58,17 +58,14 @@ nav{
   z-index: 1;
   padding: 40px 0px;
 
-  h2{
-    width: 100%;
-  }
-
   .logo{
 
-    width: 100%;
+    height: 40px;
+    width: 120px;
 
     img{
-      width: $navwidth - 100;
-
+      margin: 0;
+      padding: 0;
     }
   }
 

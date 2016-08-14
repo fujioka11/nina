@@ -123,12 +123,12 @@ nav {
   width: 160px;
   z-index: 1;
   padding: 40px 0px; }
-  nav h2 {
-    width: 100%; }
   nav .logo {
-    width: 100%; }
+    height: 40px;
+    width: 120px; }
     nav .logo img {
-      width: 160px; }
+      margin: 0;
+      padding: 0; }
   nav a {
     color: #444; }
   nav .main-navi {
@@ -191,7 +191,7 @@ nav {
   position: relative; }
   .top_inner .subtitle {
     position: absolute;
-    left: 0px;
+    left: 40px;
     top: 35%;
     z-index: 2; }
     .top_inner .subtitle svg {
