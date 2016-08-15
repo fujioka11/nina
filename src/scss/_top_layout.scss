@@ -86,6 +86,13 @@ $chach_txt:15;
     @include fts(14,33);
     @include widtnPercent(1100,1050);
 
+    @include respond(md){
+      @include fts(16,35);
+      width: 100%;
+    }
+
+
+
   }
 }
 
@@ -100,14 +107,14 @@ $service-color:#f1f1f1;
   @include cf();
   background: #f1f1f1;
   letter-spacing: -.40em;//隙間消去用
-  padding-bottom: $servive-margin;
+  padding-bottom: 0.74%;;
 
   .service-name{
     @include widtnPercent(1080,260);
     display: inline-block;
     vertical-align: top;
     letter-spacing:normal;//隙間消去用
-    margin-top: $servive-margin;
+    margin-top: 0.74%;
     margin-left: 0.74%;
   }
 
@@ -124,6 +131,12 @@ $service-color:#f1f1f1;
       display: block;
       position: relative;
       padding-bottom: 23px;
+
+      @include respond(md){
+        @include fts(13);
+      }
+
+
 
       &:before,&:after{
         background: #00C793;

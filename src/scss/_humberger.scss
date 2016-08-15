@@ -20,16 +20,18 @@ $circlewidth:11px;
     @include fts(13,34);
 
     @include respond(md){
-      @include fts(16,34);
+      @include fts(14,34);
+
     }
 
     a{
       font-weight: bold;
 
       @include respond(md){
-        padding:25px;
+        padding:40px;
         display: block;
         border-top: 1px solid $bordercolor;
+        text-align: center;
       }
     }
   }

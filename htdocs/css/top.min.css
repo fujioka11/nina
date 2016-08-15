@@ -216,16 +216,17 @@ nav a {
   line-height: 2.61538; }
   @media print, screen and (min-width: 480px) and (max-width: 1079px) {
     .main-navi li {
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 2.125; } }
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 2.42857; } }
   .main-navi li a {
     font-weight: bold; }
     @media print, screen and (min-width: 480px) and (max-width: 1079px) {
       .main-navi li a {
-        padding: 25px;
+        padding: 40px;
         display: block;
-        border-top: 1px solid #E9E9E9; } }
+        border-top: 1px solid #E9E9E9;
+        text-align: center; } }
 
 @media print, screen and (min-width: 1080px) {
   .nav-toggle {
@@ -337,6 +338,12 @@ nav a {
     font-size: 1.4rem;
     line-height: 2.35714;
     width: 95.46%; }
+    @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+      .top-contents p {
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 2.1875;
+        width: 100%; } }
 
 /*service*/
 .service-box {
@@ -344,7 +351,7 @@ nav a {
   *zoom: 1;
   background: #f1f1f1;
   letter-spacing: -.40em;
-  padding-bottom: 8px; }
+  padding-bottom: 0.74%; }
   .service-box:after {
     content: "";
     display: table;
@@ -354,7 +361,7 @@ nav a {
     display: inline-block;
     vertical-align: top;
     letter-spacing: normal;
-    margin-top: 8px;
+    margin-top: 0.74%;
     margin-left: 0.74%; }
   .service-box .service-title {
     text-align: center;
@@ -370,6 +377,11 @@ nav a {
       display: block;
       position: relative;
       padding-bottom: 23px; }
+      @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+        .service-box .service-title em {
+          font-size: 13px;
+          font-size: 1.3rem;
+          line-height: 1.84615; } }
       .service-box .service-title em:before, .service-box .service-title em:after {
         background: #00C793;
         bottom: 9px;
@@ -413,91 +425,88 @@ nav a {
   margin-top: -2px; }
 
 .topworks {
+  color: #fff;
   display: inline-block;
+  letter-spacing: normal;
   vertical-align: top;
-  letter-spacing: normal;
-  width: 33.1%;
-  margin-left: 0.18%;
-  margin-top: 2px; }
-
-figure {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  letter-spacing: normal;
-  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  /*background: #333;*/ }
-  figure img {
+  width: 33.1%; }
+  .topworks img {
     width: 100%;
     height: auto; }
-  figure:after {
-    position: absolute;
-    background: #DADADA;
-    content: "";
-    display: block;
-    width: 50%;
-    height: 1px;
-    left: 25%;
-    top: 50%;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: all .4s ease-out;
-    transition: all .4s ease-out; }
-  figure:hover:after {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-  figure:hover figcaption p, figure:hover figcaption h4 {
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
-  figure:hover img {
-    opacity: .05;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2); }
-  figure img {
-    -webkit-transition: all .8s ease-out;
-    transition: all .8s ease-out;
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 
-figcaption p, figcaption h4 {
+section figure {
+  background: #000 none repeat scroll 0 0;
+  /*height: 266px;*/
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+    /*display: inline-block;
+    vertical-align: top;
+
+    letter-spacing: normal;
+    @include widtnPercent(1100,364);//3列で表示
+    margin-left: 0.18%;
+    margin-top: 2px;*/ }
+
+.topworks figure:after {
+  position: absolute;
+  background: #fff;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  left: 5%;
+  top: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all .9s ease-out;
+  transition: all .9s ease-out; }
+
+.topworks figure:hover:after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.topworks figcaption p,
+.topworks figcaption h3 {
   position: absolute;
   text-align: center;
+  color: #fff;
   width: 100%;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  color: #444;
-  -webkit-transition: all .2s ease-out .2s;
-  transition: all .2s ease-out .2s; }
-figcaption h4 {
-  bottom: 54%;
+  -webkit-transition: all .4s ease-out .4s;
+  transition: all .4s ease-out .4s; }
+
+.topworks figcaption h3 {
+  bottom: 51%;
   -webkit-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
-  font-size: 15px;
-  font-size: 15px;
-  font-size: 1.5rem;
-  line-height: 1.73333;
-  width: 80%;
-  left: 10%; }
-figcaption p {
-  top: 54%;
-  font-size: 12px;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 2;
+  transform: translateY(-30px); }
+
+.topworks figcaption p {
+  top: 52%;
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
-  transform: translateY(30px);
-  width: 70% !important;
-  left: 50%;
-  margin-left: -35%;
-  color: #686868;
-  text-align: center; }
+  transform: translateY(30px); }
+
+.topworks figure:hover figcaption p,
+.topworks figure:hover figcaption h3 {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  color: #fff;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0); }
+
+.topworks figure img {
+  -webkit-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out; }
+
+.topworks figure:hover img {
+  opacity: .4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3); }
