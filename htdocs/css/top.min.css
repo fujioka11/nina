@@ -147,35 +147,6 @@ nav .logo {
     padding: 0; }
 nav a {
   color: #444; }
-@media print, screen and (min-width: 1080px) {
-  nav .main-navi {
-    margin: 35px 0 20px; } }
-@media print, screen and (min-width: 480px) and (max-width: 1079px) {
-  nav .main-navi {
-    z-index: 100;
-    position: absolute;
-    top: 87px;
-    background: #fff;
-    box-shadow: 0px 1px 2px 0px rgba(106, 106, 106, 0.5);
-    display: none;
-    width: 100%; } }
-nav .main-navi li {
-  font-size: 13px;
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 2.61538; }
-  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
-    nav .main-navi li {
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 2.125; } }
-  nav .main-navi li a {
-    font-weight: bold; }
-    @media print, screen and (min-width: 480px) and (max-width: 1079px) {
-      nav .main-navi li a {
-        padding: 25px;
-        display: block;
-        border-top: 1px solid #E9E9E9; } }
 
 @media print, screen and (min-width: 480px) and (max-width: 1079px) {
   .request {
@@ -225,6 +196,36 @@ nav .main-navi li {
 .latest {
   background: #E9E9E9;
   width: 100%; }
+
+@media print, screen and (min-width: 1080px) {
+  .main-navi {
+    margin: 35px 0 20px; } }
+@media print, screen and (min-width: 480px) and (max-width: 1079px) {
+  .main-navi {
+    z-index: 100;
+    position: absolute;
+    top: 87px;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(106, 106, 106, 0.5);
+    display: none;
+    width: 100%; } }
+.main-navi li {
+  font-size: 13px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 2.61538; }
+  @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+    .main-navi li {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 2.125; } }
+  .main-navi li a {
+    font-weight: bold; }
+    @media print, screen and (min-width: 480px) and (max-width: 1079px) {
+      .main-navi li a {
+        padding: 25px;
+        display: block;
+        border-top: 1px solid #E9E9E9; } }
 
 @media print, screen and (min-width: 1080px) {
   .nav-toggle {

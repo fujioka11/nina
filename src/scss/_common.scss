@@ -93,40 +93,7 @@ nav{
     color:$basecolor;
   }
 
-  .main-navi{
 
-    @include respond(pc){
-      margin: 35px 0 20px;
-    }
-    @include respond(md){
-      z-index:100;
-      position:absolute;
-      top:87px;
-      background:#fff;
-      box-shadow: 0px 1px 2px 0px rgba(106,106,106,0.50);
-      display:none;
-      width:100%;
-    }
-
-    li{
-
-      @include fts(13,34);
-
-      @include respond(md){
-        @include fts(16,34);
-      }
-
-      a{
-        font-weight: bold;
-
-        @include respond(md){
-          padding:25px;
-          display: block;
-          border-top: 1px solid $bordercolor;
-        }
-      }
-    }
-  }
 }
 
 .request {
