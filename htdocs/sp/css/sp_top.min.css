@@ -96,7 +96,7 @@ p {
 .wrap {
   width: 100%;
   position: relative;
-  background: #f2f2f2; }
+  background: #fff; }
 
 header {
   background: #fff;
@@ -116,10 +116,6 @@ header {
       width: 100%;
       margin: 0;
       padding: 0; }
-
-.main {
-  width: 100%;
-  background: #fff; }
 
 .sp-contents {
   width: 94.67%;
@@ -212,22 +208,26 @@ h4 {
   padding: 10px 2.6% 5px;
   background: #f1f1f1; }
 
-.main-visual {
-  position: relative;
-  height: auto; }
-  .main-visual .top-img {
-    background: url(../../img/top/sp/sp_top.png) no-repeat 0 0;
-    background-size: cover;
-    padding-top: calc(100% * 165 / 375);
-    z-index: -1;
-    width: 100%;
-    min-height: 165px;
-    top: 0; }
-  .main-visual svg {
-    width: 94.67%;
-    position: absolute;
-    left: 2.6%;
-    top: calc(100% * 265 / 375); }
-  .main-visual svg img {
-    margin: 0;
-    padding: 0; }
+.top-img {
+  background: url(../../img/top/sp/sp_top.png) no-repeat 0 0;
+  background-size: cover;
+  padding-top: calc(100% * 165 / 375);
+  z-index: -1;
+  width: 100%;
+  min-height: 165px;
+  top: 0; }
+
+.subtitle {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: calc(100% * -40 / 375); }
+
+.subtitle img {
+  margin: 0;
+  padding: 0; }
+
+.top_main {
+  width: 100%;
+  margin-top: 40px; }
