@@ -31,6 +31,15 @@ p{
   width: 100%;
   position: relative;
   background: #fff;
+
+  @include respond(md){
+    min-width: 600px;
+  };
+
+
+  @include respond(xs){
+    display: none;
+  };
 }
 
 header{
@@ -104,20 +113,18 @@ nav{
     @include widtnPercent(768,140);
     text-align: center;
 
+
     a{
       display: block;
       background: $btcolor;
       padding: 5px 0;
-      border-radius: 6px;
+      color: #fff;
       box-shadow: 0px 1px 2px 0px rgba(106,106,106,0.50);
 
       .icon{
         display: none;
       }
 
-      &:hover{
-        background: #f1f1f1;
-      }
     }
   }
 
@@ -129,22 +136,24 @@ nav{
     @include fts(12);
     position: relative;
 
+
     a{
       display: block;
       background: $btcolor;
       padding: 10px 0 10px 15px;
+      color: #fff;
 
       .icon{
         width: $iconwidth/2;
         height: $iconwidth/2;
-        fill:$txtxcolor;
+        fill:#fff;
         position: absolute;
         right: 10px;
         top: 15px;
       }
 
       &:hover{
-        background: #f1f1f1;
+        background: $bthovercolor;
       }
     }
   }

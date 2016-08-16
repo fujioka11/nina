@@ -1,0 +1,31 @@
+.sp-contents{
+
+}
+
+h2{
+  margin-bottom: 6px;
+  @include fts(16,28);
+}
+
+h3{
+  @include fts(12,24);
+  font-weight: normal;
+}
+h4{
+  @include fts(12);
+  font-weight: normal;
+  padding:10px 2.6% 5px;
+  background:#f1f1f1;
+}
+
+.main-visual{
+
+  .top-img{
+    background: url(../../img/top/sp/sp_top.png) no-repeat 0 0;
+    background-size:cover;
+    padding-top: calc(100% * 165 / 375);
+    z-index: -1;
+    @include widtnPercent(320,320);
+    @include center();
+  }
+}

@@ -3,17 +3,42 @@
   background: #fff;
   overflow: hidden;
   letter-spacing: -.40em;
-  margin-left: -0.18%;
-  margin-top: -2px;
-  //@include cf();
+  margin-top: -4px;
+
+  @include respond(pc){
+    margin-left: -0.36%;
+
+  }
+  @include respond(md){
+    margin-left: -0.5%;
+    margin-top:-30px;
+  }
+
 }
 
 .topworks{
-  color: #fff;
+
   display: inline-block;
   letter-spacing: normal;
   vertical-align: top;
-  @include widtnPercent(1100,364);
+
+  @include respond(pc){
+    color: #fff;
+    margin-left: 0.36%;
+    @include widtnPercent(1100,362);
+    margin-top: 4px;
+  }
+
+  @include respond(md){
+    color: #fff;
+    margin-left: 0.5%;
+    @include widtnPercent(768,380);
+    margin-top:30px;
+  }
+
+  a{
+    display: block;
+  }
 
   img{
     width: 100%;
@@ -22,22 +47,25 @@
 }
 
 section figure{
-  background: #000 none repeat scroll 0 0;
-    /*height: 266px;*/
+
+  @include respond(pc){
+
+    background: #000 none repeat scroll 0 0;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
 
-    /*display: inline-block;
-    vertical-align: top;
+  }
 
-    letter-spacing: normal;
-    @include widtnPercent(1100,364);//3列で表示
-    margin-left: 0.18%;
-    margin-top: 2px;*/
+    @include respond(md){
+      margin:0;
+      padding:0;
+    }
+
 }
-
 .topworks figure:after {
+
+  @include respond(pc){
     position: absolute;
     background: #fff;
     content: "";
@@ -48,41 +76,78 @@ section figure{
     top: 50%;
     transform: scale(0);
     transition: all .9s ease-out;
+  }
+  @include respond(md){
+    display:none;
+  }
+
 }
 
 .topworks figure:hover:after {
+  @include respond(pc){
     transform: scale(1);
+  }
 }
 
 .topworks figcaption p,
-.topworks figcaption h3 {
+.topworks figcaption h4 {
+  @include respond(pc){
     position: absolute;
     text-align: center;
     color: #fff;
     width: 100%;
     opacity: 0;
     transition: all .4s ease-out .4s;
+  }
 }
 
-.topworks figcaption h3 {
-    bottom: 51%;
+figcaption{
+
+  @include respond(md){
+    width:100%;
+    padding: 0 1.5%;
+    margin-top: 15px;
+  }
+
+}
+
+.topworks figcaption h4 {
+  @include respond(pc){
+    bottom: 54%;
     transform: translateY(-30px);
+  }
+  @include respond(md){
+    color:$basecolor;
+  }
 }
 .topworks figcaption p {
+  @include respond(pc){
     top: 52%;
     transform: translateY(30px);
+    @include fts(16);
+  }
+  @include respond(md){
+    color:$txtxcolor;
+    @include fts(14);
+  }
 }
 .topworks figure:hover figcaption p,
-.topworks figure:hover figcaption h3 {
+.topworks figure:hover figcaption h4 {
+  @include respond(pc){
     opacity: 1;
     color: #fff;
     transform: translateY(0);
+  }
 }
 
 .topworks figure img {
+  @include respond(pc){
     transition: all 1.2s ease-out;
+  }
 }
 .topworks figure:hover img {
+  @include respond(pc){
     opacity: .4;
     transform: scale(1.3);
+  }
 }

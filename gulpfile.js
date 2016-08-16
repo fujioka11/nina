@@ -41,6 +41,8 @@ var paths = {
   'scssFiles' : 'src/scss/**/*.scss',
 // css
   'cssDest'   : 'htdocs/css',
+  //sp
+  'cssDest_sp'   : 'htdocs/sp/css',
 
 // sketch
   srcDir  : './src/sketch',
@@ -107,6 +109,7 @@ gulp.task('rubySass', function () {
           minifier: false // minify無効
         }))
         .pipe(gulp.dest(paths.cssDest))
+        .pipe(gulp.dest(paths.cssDest_sp))
         .pipe(browserSync.reload({stream: true}));
 
 });
