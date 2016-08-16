@@ -1,6 +1,5 @@
-.sp-contents{
 
-}
+$contentswidth:94.67%;
 
 h2{
   margin-bottom: 6px;
@@ -19,13 +18,28 @@ h4{
 }
 
 .main-visual{
+  position: relative;
+  height: auto;
 
   .top-img{
     background: url(../../img/top/sp/sp_top.png) no-repeat 0 0;
     background-size:cover;
     padding-top: calc(100% * 165 / 375);
     z-index: -1;
-    @include widtnPercent(320,320);
-    @include center();
+    @include widtnPercent(375,375);
+    min-height: 165px;
+    top: 0;
+  }
+
+  svg{
+    width:94.67%;
+    position: absolute;
+    left: 2.6%;
+    top: calc(100% * 265 / 375);
+  }
+
+  svg img{
+    margin: 0;
+    padding: 0;
   }
 }
