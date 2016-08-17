@@ -3,9 +3,10 @@
   background: #fff;
   overflow: hidden;
   letter-spacing: -.40em;
-  margin-top: -4px;
+
 
   @include respond(pc){
+    margin-top: -4px;
     margin-left: -0.36%;
 
   }
@@ -14,26 +15,40 @@
     margin-top:-30px;
   }
 
+  @include respond(xs){
+    letter-spacing: normal;
+    margin-top:-20px;
+  }
+
 }
 
 .topworks{
 
-  display: inline-block;
-  letter-spacing: normal;
-  vertical-align: top;
-
   @include respond(pc){
+    display: inline-block;
+    vertical-align: top;
     color: #fff;
     margin-left: 0.36%;
     @include widtnPercent(1100,362);
     margin-top: 4px;
+    letter-spacing: normal;
+
   }
 
   @include respond(md){
+    display: inline-block;
+    vertical-align: top;
     color: #fff;
     margin-left: 0.5%;
     @include widtnPercent(768,380);
     margin-top:30px;
+    letter-spacing: normal;
+  }
+
+  @include respond(xs){
+    margin-top:20px;
+    border-bottom:1px solid $bordercolor;
+    padding-bottom:20px;
   }
 
   a{
@@ -58,6 +73,11 @@ section figure{
   }
 
     @include respond(md){
+      margin:0;
+      padding:0;
+    }
+
+    @include respond(xs){
       margin:0;
       padding:0;
     }
@@ -109,6 +129,12 @@ figcaption{
     margin-top: 15px;
   }
 
+  @include respond(xs){
+    width:100%;
+    padding: 0 1.5%;
+    margin-top: 15px;
+  }
+
 }
 
 .topworks figcaption h4 {
@@ -117,6 +143,9 @@ figcaption{
     transform: translateY(-30px);
   }
   @include respond(md){
+    color:$basecolor;
+  }
+  @include respond(xs){
     color:$basecolor;
   }
 }

@@ -14,15 +14,23 @@ $circlewidth:11px;
     display:none;
     width:100%;
   }
+  @include respond(xs){
+    z-index:100;
+    position:absolute;
+    top:87px;
+    background:#fff;
+    box-shadow: 0px 1px 2px 0px rgba(106,106,106,0.50);
+    display:none;
+    width:100%;
+  }
 
   li{
 
-    @include fts(13,34);
-
-    @include respond(md){
-      @include fts(14,34);
-
+    @include respond(pc){
+      @include fts(13,34);
     }
+
+      @include fts(14,34);
 
     a{
       font-weight: bold;
@@ -33,6 +41,14 @@ $circlewidth:11px;
         border-top: 1px solid $bordercolor;
         text-align: center;
       }
+
+      @include respond(xs){
+        padding:40px;
+        display: block;
+        border-top: 1px solid $bordercolor;
+        text-align: center;
+      }
+
     }
   }
 }
@@ -48,6 +64,13 @@ $circlewidth:11px;
     display: block;
     position:absolute;
     top:31px;
+    left:20px;
+  }
+
+  @include respond(xs){
+    display: block;
+    position:absolute;
+    top:22px;
     left:20px;
   }
 

@@ -23,17 +23,38 @@ $chach_txt:15;
 
       left:20px;
       top:50%-20;
+      @include widtnPercent(768,600);
+
+    }
+
+    @include respond(xs){
+
+      left:20px;
+      top:50%-25;
+      @include widtnPercent(768,600);
 
     }
 
     svg{
       /*width: 800px;*/
-      width: 700px;
-
-      @include respond(md){
-        width:600px;
+      @include respond(pc){
+        width: 700px;
       }
 
+      //tbとsp
+      @include respond(md){
+        width:100%;
+      }
+
+      @include respond(xs){
+        width:100%;
+      }
+
+    }
+    smg img{
+      margin: 0;
+      padding: 0;
+      width: 100%;
     }
     .defs{
       display: none;
@@ -49,7 +70,6 @@ $chach_txt:15;
     padding-top: calc(100% * 400 / 850);
     z-index: -1;
     margin-left: (230 / 1080) *100%;
-    min-width: 480px;
 
   }
 }
@@ -66,11 +86,26 @@ $chach_txt:15;
 
   };
 
+  @include respond(xs){
+
+    margin-top: 30px;
+
+    @include widtnPercent(375,345);
+    @include center();
+
+  };
+
   h3{
 
     @include fts(13);
     margin-bottom: 20px;
     color: #000;
+
+    @include respond(xs){
+      margin-bottom: 10px;
+    }
+
+
 
   }
 
@@ -91,6 +126,11 @@ $chach_txt:15;
       width: 100%;
     }
 
+    @include respond(xs){
+      @include fts(14,26);
+      width: 100%;
+    }
+
 
 
   }
@@ -107,7 +147,14 @@ $service-color:#f1f1f1;
   @include cf();
   background: #f1f1f1;
   letter-spacing: -.40em;//隙間消去用
-  padding-bottom: 0.74%;;
+  padding-bottom: 0.74%;
+
+  @include respond(xs){
+    margin-top: 20px;
+    background: #f2f2f2;
+  }
+
+
 
   .service-name{
     @include widtnPercent(1080,260);
@@ -116,6 +163,13 @@ $service-color:#f1f1f1;
     letter-spacing:normal;//隙間消去用
     margin-top: 0.74%;
     margin-left: 0.74%;
+
+    @include respond(xs){
+      width: 100%;
+      @include center();
+      padding-left: 0.74%;
+      padding-right: 0.74%;
+    };
   }
 
   .service-title{
@@ -123,6 +177,13 @@ $service-color:#f1f1f1;
     background: #fff;
     padding: 30px 0;
     border-bottom: 1px solid $service-color;
+
+    @include respond(xs){
+      padding: 5.3% 0;
+      background: #f2f2f2;
+    }
+
+
 
 
     em{
@@ -167,6 +228,10 @@ $service-color:#f1f1f1;
     @include fts(13,22);
     display: flex;
 
+    @include respond(xs){
+      padding: 5.3% 5.3% 6.6%;
+    };
+
     ul{
       margin-top: -5px;
 
@@ -179,3 +244,6 @@ $service-color:#f1f1f1;
   }
 
 }
+
+
+/*work*/
