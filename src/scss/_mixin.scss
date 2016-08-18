@@ -15,6 +15,7 @@
 }
 
 
+
 //パーセント
 @mixin widtnPercent( $parentPxWidth, $pxWidth ){
     width: ceil((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
@@ -60,6 +61,11 @@
 @mixin p-txt(){
 	@include fts(14);
 	color: $txtxcolor;
+}
+
+@mixin fontface() {
+	font-family: "Brandon Grotesque";
+	font-weight: bold;
 }
 
 //グラデ

@@ -42,7 +42,7 @@ var paths = {
 // css
   'cssDest'   : 'htdocs/css',
   //sp
-  'cssDest_sp'   : 'htdocs/sp/css',
+  'cssDest_wp'   : 'nina-dev/www/wordpress/wp-content/themes/ninatheme/css',
 
 // sketch
   srcDir  : './src/sketch',
@@ -109,6 +109,7 @@ gulp.task('rubySass', function () {
           minifier: false // minify無効
         }))
         .pipe(gulp.dest(paths.cssDest))
+        .pipe(gulp.dest(paths.cssDest_wp))
         .pipe(browserSync.reload({stream: true}));
 
 });

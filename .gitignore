@@ -1,3 +1,4 @@
 node_modules/
 *.scssc
 htdocs/svg/*.png
+nina-dev

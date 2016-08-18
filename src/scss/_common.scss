@@ -1,5 +1,7 @@
 html{
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
   body{
   margin: 0;
@@ -95,6 +97,7 @@ nav{
     height:86px;
     @include center();
     padding-top:20px;
+    position:relative;
   }
 
   @include respond(xs){
@@ -102,12 +105,13 @@ nav{
     height:70px;
     @include center();
     padding-top:20px;
+    position:relative;
   }
 
   .logo{
 
     height: 40px;
-    width: 120px;
+    width: 100px;
 
     @include respond(md){
       position: absolute;
@@ -145,10 +149,10 @@ nav{
 
   @include respond(md){
     position: absolute;
-    right: 20;
     @include widtnPercent(768,140);
     text-align: center;
     top: 24px;
+    right:20px;
 
 
     a{
