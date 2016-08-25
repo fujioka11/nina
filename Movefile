@@ -1,0 +1,37 @@
+local:
+  vhost: "weave.com" # ローカルのURL
+  wordpress_path: "/var/www/wordpress/" # ローカルのWordPressのパス
+
+  database:
+    name: "wordpress"
+    user: "wordpress"
+    password: "wordpress"
+    host: "192.168.33.13"
+
+staging:
+  vhost: "media-weave.link" # さくらのレンタルサーバーのURL
+  wordpress_path: "/home/testaaa/www/weave_media/" # さくらのレンタルサーバーのWordPressのパス
+
+  database:
+    name: "testaaa_fujioka"
+    user: "testaaa"
+    password: "19831101Fu"
+    host: "mysql494.db.sakura.ne.jp" # さくらのホスト名
+    charset: "utf8" # さくらはDBをdumpするとujisになっちゃうのでcharsetを指定
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+    - ".DS_Store"
+
+  ssh:
+    host: "testaaa.sakura.ne.jp"
+    user: "testaaa"
+    password: "knrrt7tz39"

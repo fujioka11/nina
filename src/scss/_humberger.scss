@@ -27,10 +27,13 @@ $circlewidth:11px;
   li{
 
     @include respond(pc){
-      @include fts(13,34);
+      @include fts(12,34);
+      letter-spacing: 0.01em;
+
     }
 
       @include fts(14,34);
+      font-family: "lato",sans-serif;
 
     a{
       font-weight: bold;
@@ -49,6 +52,14 @@ $circlewidth:11px;
         text-align: center;
       }
 
+      &:hover{
+        color: $btcolor;
+      }
+
+    }
+
+    .active{
+      color: $btcolor;
     }
   }
 }

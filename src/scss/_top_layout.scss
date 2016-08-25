@@ -4,6 +4,15 @@
 $service-color:#37DDB8;
 $chach_txt:15;
 
+
+.sp-contents{
+  @include respond(xs){
+  background: #fff;
+  padding: 15px 0 20px;
+  margin-bottom: 10px;
+}
+}
+
 .top_inner {
 
   margin: 0 auto;
@@ -11,6 +20,12 @@ $chach_txt:15;
   text-align: left;
   background: #fff;
   position: relative;
+
+  @include respond(xs){
+    padding-bottom:10px;
+  }
+
+
 
   .subtitle{
 
@@ -51,11 +66,7 @@ $chach_txt:15;
       }
 
     }
-    smg img{
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
+
     .defs{
       display: none;
     }
@@ -77,18 +88,74 @@ $chach_txt:15;
 /*共通*/
 .top-contents {
 
+  .readtxt{
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 15px;
+    letter-spacing: -0.09em;
+
+    @include respond(md){
+      padding-right: 0px;
+    }
+
+    @include respond(xs){
+      padding-right: 0px;
+      text-align: center;
+      border-top: 1px solid $bordercolor;
+      margin-top: 15px;
+      padding-top: 20px;
+      display: block;
+
+    };
+
+    span{
+      border-bottom: 1px solid $btcolor;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      width: 50px;
+
+      @include respond(xs){
+        display: none;
+      }
+
+
+    }
+
+
+
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      color: #0EBECA;
+      @include fts(16);
+
+      &:hover{
+        color: $bthovercolor;
+      }
+
+      @include respond(xs){
+        @include fts(13);
+        color:$txtxcolor;
+      }
+
+
+    }
+  }
+
   margin-top: 50px;
 
   @include respond(md){
 
     @include widtnPercent(768,728);
     @include center();
+    margin-top:40px;
 
   };
 
   @include respond(xs){
-
-    margin-top: 30px;
+    margin-top:0px;
 
     @include widtnPercent(375,345);
     @include center();
@@ -97,13 +164,45 @@ $chach_txt:15;
 
   h3{
 
-    @include fts(13);
+    @include fts(14,20);
     margin-bottom: 20px;
-    color: #000;
+    color: #4A4A4A;
+    display: inline-block;
 
-    @include respond(xs){
+    @include respond(md){
       margin-bottom: 10px;
     }
+
+    @include respond(xs){
+      margin-bottom:6px;
+      display: block;
+      color: #515151;
+      @include fts(12,20);
+    }
+
+    span.sp{
+
+      display: none;
+
+      @include respond(xs){
+        display: block;
+        @include fts(14);
+        color: #262626;
+        margin-bottom: 10px;
+        font-weight: normal;
+      }
+    }
+
+    span.pc{
+
+      display: block;
+
+      @include respond(xs){
+        display: none;
+      }
+    }
+
+
 
 
 
@@ -118,16 +217,16 @@ $chach_txt:15;
 
   p{
 
-    @include fts(14,33);
+    @include fts(15,33);
     @include widtnPercent(1100,1050);
 
     @include respond(md){
-      @include fts(16,35);
+      @include fts(16,30);
       width: 100%;
     }
 
     @include respond(xs){
-      @include fts(14,26);
+      @include fts(13,24);
       width: 100%;
     }
 
@@ -144,25 +243,47 @@ $service-color:#f1f1f1;
 .service-box{
 
   margin-top: $basemt;
-  @include cf();
   background: #f1f1f1;
+
   letter-spacing: -.40em;//隙間消去用
-  padding-bottom: 0.74%;
+  padding-bottom: 1.04%;
+
+  @include respond(md){
+    padding-bottom: 1.04%;
+    letter-spacing: -.40em;//隙間消去用
+    @include cf();
+  }
 
   @include respond(xs){
     margin-top: 20px;
     background: #f2f2f2;
+
   }
 
 
 
   .service-name{
+
+    letter-spacing:normal;//隙間消去用
+
+    @include respond(pc){
+
     @include widtnPercent(1080,260);
     display: inline-block;
     vertical-align: top;
     letter-spacing:normal;//隙間消去用
     margin-top: 0.74%;
     margin-left: 0.74%;
+  }
+
+    @include respond(md){
+      @include widtnPercent(768,182);
+      float: left;
+      letter-spacing:normal;//隙間消去用
+      margin-top: 1.04%;
+      margin-left: 1.04%;
+
+    }
 
     @include respond(xs){
       width: 100%;
@@ -179,12 +300,11 @@ $service-color:#f1f1f1;
     border-bottom: 1px solid $service-color;
 
     @include respond(xs){
-      padding: 5.3% 0;
+      padding: 3% 0 3% 5%;
       background: #f2f2f2;
+      text-align: left;
+
     }
-
-
-
 
     em{
       @include fts(15);
@@ -195,6 +315,10 @@ $service-color:#f1f1f1;
 
       @include respond(md){
         @include fts(13);
+      }
+      @include respond(xs){
+        @include fts(13);
+        padding-bottom:0px;
       }
 
 
@@ -209,6 +333,11 @@ $service-color:#f1f1f1;
         position: absolute;
         right: 0;
         width: 25px;
+
+        @include respond(xs){
+          display: none;
+        }
+
       }
     }
 
@@ -216,6 +345,12 @@ $service-color:#f1f1f1;
       display: block;
       @include fts(9);
       font-weight: normal;
+
+      @include respond(xs){
+        display: none;
+      }
+
+
     }
   }
 
@@ -234,6 +369,10 @@ $service-color:#f1f1f1;
 
     ul{
       margin-top: -5px;
+
+      @include respond(xs){
+        width: 100%;
+      };
 
     }
 

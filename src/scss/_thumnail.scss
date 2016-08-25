@@ -3,21 +3,22 @@
   background: #fff;
   overflow: hidden;
   letter-spacing: -.40em;
+  margin-bottom: 30px;
 
 
   @include respond(pc){
-    margin-top: -4px;
+    margin-top: 26px;
     margin-left: -0.36%;
 
   }
   @include respond(md){
     margin-left: -0.5%;
-    margin-top:-30px;
+    margin-top: -10px;
   }
 
   @include respond(xs){
     letter-spacing: normal;
-    margin-top:-20px;
+    margin-top:-10px;
   }
 
 }
@@ -41,14 +42,12 @@
     color: #fff;
     margin-left: 0.5%;
     @include widtnPercent(768,380);
-    margin-top:30px;
+    margin-top:40px;
     letter-spacing: normal;
   }
 
   @include respond(xs){
     margin-top:20px;
-    border-bottom:1px solid $bordercolor;
-    padding-bottom:20px;
   }
 
   a{
@@ -134,6 +133,7 @@ figcaption{
     width:100%;
     padding: 0 1.5%;
     margin-top: 15px;
+    text-decoration:none;
   }
 
 }
@@ -142,19 +142,21 @@ figcaption{
   @include respond(pc){
     bottom: 54%;
     transform: translateY(-30px);
+
   }
   @include respond(md){
     color:$basecolor;
   }
   @include respond(xs){
     color:$basecolor;
+    @include fts(12);
   }
 }
 .topworks figcaption p {
   @include respond(pc){
     top: 52%;
     transform: translateY(30px);
-    @include fts(16);
+    @include fts(12);
   }
   @include respond(md){
     color:$txtxcolor;

@@ -8,7 +8,7 @@ html{
   padding: 0;
   font-size: 14px;
   line-height: 1.8em;
-  font-family:  "Verdana",'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif!important;
+  font-family: "Lato","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   color: $basecolor;
   height: 100%;
   background: #fff;
@@ -28,18 +28,17 @@ p{
 
   @include respond(pc){
     color: $txtxcolor;
-    @include fts(14,32);
+    @include fts(15,33);
   }
 
   @include respond(md){
     color: #000;
-    @include fts(14,26);
-
+    @include fts(16,30);
   }
 
   @include respond(xs){
     color: #000;
-    @include fts(14,16);
+    @include fts(13,24);
   }
 
 
@@ -49,10 +48,17 @@ p{
   width: 100%;
   position: relative;
   background: #fff;
+  border-top: 5px solid $btcolor;
 
   @include respond(md){
     min-width: $sm-device-width;
   };
+
+  @include respond(xs){
+    background:#f2f2f2;
+  };
+
+
 }
 
 header{
@@ -74,7 +80,7 @@ header{
 
   h1{
     font-weight: normal;
-    @include fts(11);
+    @include fts(12);
     display: inline-block;
   }
 }
@@ -86,10 +92,9 @@ nav{
     min-height: 280px;
     position: fixed;
     left: 2.77%;
-    top: 60px;
+    top: 160px;
     width: $navwidth - 100;
     z-index: 1;
-    padding: 40px 0px;
   }
 
   @include respond(md){
@@ -103,6 +108,7 @@ nav{
   @include respond(xs){
     width:100%;
     height:70px;
+    background:#fff;
     @include center();
     padding-top:20px;
     position:relative;
@@ -140,6 +146,35 @@ nav{
 
 }
 
+
+.sns-box{
+  margin: 40px 0 0 -10px;
+
+  @include respond(md){
+    display: none;
+  };
+
+  @include respond(xs){
+    display: none;
+  };
+
+  li{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 10px;
+
+    .foot-icon{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      fill:#ccc;
+    }
+  }
+
+}
+
 .request {
 
 
@@ -160,7 +195,16 @@ nav{
       background: $btcolor;
       padding: 2px;
       color: #fff;
-      box-shadow: 0px 1px 2px 0px rgba(106,106,106,0.50);
+      font-weight: bold;
+      padding: 6px 0;
+
+      box-shadow: 0px 1px 1px 0px rgba(106,106,106,0.50);
+
+      @include respond(md){
+        background: $bthovercolor;
+      }
+
+
 
       .icon{
         display: none;
@@ -173,28 +217,35 @@ nav{
 
   @include respond(pc){
 
-    width: 100%;
-    @include fts(12);
+    width: 90%;
     position: relative;
+    @include fts(13);
+    margin-left: -5px;
+    margin-top:20px;
 
 
     a{
       display: block;
       background: $btcolor;
-      padding: 10px 0 10px 15px;
+      padding: 6px 0 6px 13px;
       color: #fff;
 
       .icon{
-        width: $iconwidth/2;
-        height: $iconwidth/2;
+        width: 10px;
+        height: 10px;
         fill:#fff;
         position: absolute;
         right: 10px;
-        top: 15px;
+        top: 13px;
       }
 
       &:hover{
         background: $bthovercolor;
+        color: #fff;
+
+        .icon{
+          fill:#fff;
+        }
       }
     }
   }
@@ -209,9 +260,87 @@ nav{
     @include parsent(40,1440);
   }
 
-}
+  a{
+    text-decoration: none;
 
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+}
 .latest{
   background: $bordercolor;
   width: 100%;
+}
+
+footer{
+  @include widtnPercent(1440,1360);
+  @include center;
+  margin-top: 50px;
+  height: 90px;
+  position: relative;
+
+  @include respond(md){
+    height: 60px;
+  }
+
+  @include respond(xs){
+    height: 60px;
+    margin-top: 20px;
+  }
+
+
+  .pagetop{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+
+    @include respond(xs){
+      top: -13px;
+    }
+
+
+
+
+    a{
+
+      .top-icon{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        fill:$txtxcolor;
+      }
+
+      &:hover{
+
+        .top-icon{
+          fill:$btcolor;
+        }
+      }
+
+    }
+
+
+
+  }
+
+  .copyright{
+
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    @include fts(11);
+
+    @include respond(xs){
+      @include fts(10);
+      top: 4px;
+    }
+
+
+
+  }
 }

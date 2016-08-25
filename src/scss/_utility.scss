@@ -1,3 +1,27 @@
 .mt15{
   margin-top: 15px;
 }
+
+.tb_mt10{
+
+  @include respond(md){
+    margin-top: 20px;
+  };
+
+}
+
+.sp_mt10{
+  margin-top: 10px;
+}
+
+.tb_none{
+
+  @include respond(md){
+    display: none;
+  };
+
+  @include respond(xs){
+    display: none;
+  };
+
+}
