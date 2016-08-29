@@ -1,300 +1,301 @@
-$topm:30px;
+.under-container {
 
-.sp-contents {
-  @include respond(md){
-    @include widtnPercent(768,728);
-    @include center();
+  @include respond(pc){
+    background: #fff;
   }
+  @include respond(xs){
+  background: #f2f2f2;
+}
 }
 
-.page-contents{
+.breadcrumb {
 
-  @include widtnPercent(1100,1100);
+  max-width: 1280px;
+  min-width: 1000px;
   @include center();
-}
-
-.page-image {
-  @include widtnPercent(1100,1100);
-
-  img{
-    width: 100%;
-    height: auto;
-  }
-}
-
-.pbox{
-  margin-top: 17px;
+  text-align: right;
 
   @include respond(md){
-    margin-top: 20px;
+    display: none;
+  };
+  @include respond(xs){
+    display: none;
+  };
+
+  li{
+    display: inline;
+    @include fts(12);
   }
+
+}
+
+.under-inner {
+  @include widtnPercent(1280,1280);
+  @include center();
+  margin-top: 30px;
+  background: #fff;
+  padding-bottom: 30px;
 
 
   @include respond(xs){
-    width: 92%;
-    margin-top: 10px;
-    @include center();
-  }
-
-
-}
-
-.subcache {
-  font-weight: bold;
-  @include fts(18,16);
-  margin: 20px 0 15px;
-  display: inline-block;
-}
-
-
-/*contact*/
-#contact{
-  margin-top: $topm;
-  margin-bottom: 20px;
-  @include widtnPercent(1100,850);
-  @include center();
-
-  div.wpcf7-validation-errors{
-    border: none;
-    background: #f75f6f;
-    color: #fff;
-    margin: 20px 0 0;
-    padding: 20px;
+    margin-top: 0px;
     width: 100%;
+    background: #f2f2f2;
+    padding-bottom: 0px;
   }
 
-  span.wpcf7-not-valid-tip{
-    margin-bottom: 38px;
-  }
 
-  h3{
+}
+
+.headline{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.09em;
+  @include fts(24);
+  padding-bottom: 10px;
+  color: #000;
+
+  @include respond(md){
     @include fts(20);
-    font-weight: bold;
-    border-left: 3px solid $btcolor;
-    padding-left: 1em;
+  }
+
+  @include respond(xs){
+    width: 100%;
+    text-align: left;
+    @include fts(14);
+    padding-bottom: 0px;
+
+  }
+}
+
+.subheadline{
+  padding-top: 30px;
+  font-weight: bold;
+
+  @include respond(md){
+    @include fts(16);
     margin-bottom: 20px;
   }
+  @include respond(xs){
+    padding-top: 0px;
+  }
 
-  .wpcf7-form {
-    margin-top: 30px;
-    width: 800px;
+}
 
-    input{
-      width: 100%;
-      height: 50px;
-      margin: 15px 0 10px;
+
+
+
+/*about*/
+
+
+.l-about{
+  padding-top: 20px;
+
+  @include respond(xs){
+    padding: 30px 0 20px;
+    background: #fff;
+    margin-top: 0px;
+  }
+
+}
+
+.l-about-inner{
+  width: 800px;
+  @include center();
+
+  @include respond(md){
+    @include widtnPercent(640,540);
+  }
+
+  @include respond(xs){
+    @include widtnPercent(640,580);
+  }
+
+  p{
+
+    @include fts(14,30);
+    margin-top: 20px;
+
+    @include respond(xs){
+      @include fts(13,24);
+      margin-top: 10px;
     }
+  }
 
-    textarea{
-      width: 80%;
-      margin: 10px 0 40px;
-    }
+  dl{
 
-    p{
-      @include fts(13);
-      color:#000;
-      font-weight: bold;
+    @include respond(pc){
       margin-top: 20px;
+      @include cf();
+    }
+    @include respond(md){
+      color:#000;
+    }
+    @include respond(xs){
+      margin-top: 0px;
+      color:#000;
+      @include fts(13);
     }
 
-    .wpcf7-submit {
-      background: $bthovercolor;
-      color: #fff;
-      padding: 10px 0;
-      @include fts(17);
-      height: 70px;
+    dt{
+      @include respond(pc){
+        clear: both;
+        float: left;
+        width: 120px;
+      };
+
+      @include respond(md){
+        clear: both;
+        float: left;
+        @include widtnPercent(640,120);
+      };
+
+      @include respond(xs){
+        width: 100%;
+        margin-top:10px;
+      };
+
     }
 
+    dd{
+      @include respond(pc){
+        float: left;
+        margin-bottom: 15px;
+        width: 72%;
+      };
+      @include respond(md){
+        float: left;
+        margin-bottom: 15px;
+        @include widtnPercent(640,520);
+      };
 
+      @include respond(xs){
+        width: 100%;
+      };
 
+    }
   }
 
 
-
-
-
 }
+
 
 
 /*works*/
-#works{
-  margin-top: $topm;
 
-  h3{
-    @include fts(14);
-    font-weight: normal;
+  .l-works{
+
+  @include respond(pc){
+  padding-top: 20px;
+}
+
+  @include respond(md){
+    padding-top: 30px;
+  }
+
+  @include respond(xs){
+    padding-top: 30px;
+    background:#fff;
+  }
+}
+
+.l-works-inner{
+
+  @include respond(xs){
+    @include widtnPercent(640,580);
+    @include center();
+    padding-bottom: 25px;
+  }
+
+}
+
+
+
+.work-article {
+
+  @include cf();
+
+  @include respond(pc){
+    max-width: 1378px;
+    min-width: 1000px;
+    @include center();
+    padding-bottom: 2.5%;
+  }
+
+  @include respond(md){
+    width:100%;
+    @include center();
+  }
+
+  @include respond(xs){
+    @include widtnPercent(640,640);
+    @include center();
+    background:#E4E4E4;
+  }
+
+  li{
+
+    @include widtnPercent(1378,394);
+    float: left;
+
+    @include respond(pc){
+    margin-top: 3.55%;
+    margin-left: 3.55%;
+  }
 
     @include respond(md){
-      @include fts(16);
-      text-align: center;
+      @include widtnPercent(640,275);
+      margin-top: 4.8%;
+      margin-left: 4.6875%;
     }
 
-  }
+    @include respond(xs){
+      @include widtnPercent(640,640);
+      float:none;
+      @include center();
+      background:#fff;
+      display:block;
+      margin-bottom:15px;
+      box-shadow: 0px 2px 3px 0px rgba(181,181,181,0.50);
 
-  .work-contents{
-    width: 100%;
-    margin-top: 30px;
-    border-right: 1px solid $bordercolor;
-    border-bottom: 1px solid $bordercolor;
-    letter-spacing: -0.4em;
+    }
 
-  }
 
-  .workbox{
-    @include widtnPercent(1100,366);
-    border-left: 1px solid $bordercolor;
-    border-top: 1px solid $bordercolor;
-    display: inline-block;
-    letter-spacing: normal;
-    vertical-align: top;
 
-    .thumnail {
+    .thumb{
       width: 100%;
 
       img{
         width: 100%;
         height: auto;
-        text-align: center;
       }
     }
-
-    .workbox-detail {
-      padding: 25px 9.56% 40px;
-
-      h4{
-        @include fts(15,28);
-        margin-bottom: 4px;
-
-        @include respond(md){
-          @include fts(13,20);
-
-        }
-
-
-      }
-
-      .jobname{
-        color: #767676;
-        @include fts(12);
-      }
-    }
-  }
-}
-
-
-/*about*/
-#about{
-
-  .aboutprof{
-    width: 92%;
-    @include center();
-
-    @include respond(xs){
-      padding-bottom: 20px;
-    }
-
-
-  }
-
-  @include respond(pc){
-    margin-top: $topm;
-  }
-  @include respond(md){
-    margin-top: 0px;
-  }
-
-  @include respond(xs){
-    margin-top: 0px;
-    background: #fff;
-  };
-
-  dl{
-    @include cf();
-    @include fts(13);
-    margin-top:30px;
-
-    @include respond(md){
-      @include fts(16,28);
-    }
-
-    @include respond(xs){
-      margin-top:20px;
-      @include fts(13,20);
-    }
-
-
-
-    dt{
-      width: 120px;
-      float: left;
-      clear: both;
+    .info {
+      margin-top: 20px;
 
       @include respond(xs){
-        width: 23%;
+        padding: 4px 3.125% 20px;
+      };
+
+      h2{
+        @include fts(14);
+
+        @include respond(xs){
+          color: #000;
+          font-weight: bold;
+        };
       }
 
+      .job{
+        @include fts(11);
+        color: #656565;
 
-    }
-    dd{
-      float: left;
-      @include respond(pc){
-        @include widtnPercent(1100,700);
+        @include respond(xs){
+          @include fts(11);
+
+        };
+
       }
-
-      @include respond(md){
-        width:82.52%;
-      }
-
-      @include respond(xs){
-        width:70%;
-        float:right;
-      }
-      margin-bottom: 15px;
     }
-  }
-
-  h3{
-    @include fts(16,20);
-    margin-top:40px;
-
-    @include respond(md){
-      @include fts(18,20);
-      padding-left: 15px;
-      border-left: 4px solid $btcolor;
-
-    }
-
-    @include respond(xs){
-      width: 92%;
-      @include center();
-      @include fts(15,24);
-      margin-top:20px;
-    }
-  }
-
-
-
-  h4{
-    @include fts(18,20);
-
-    @include respond(md){
-      padding-left: 15px;
-      border-left: 4px solid $btcolor;
-    }
-    @include respond(xs){
-      margin-top:30px;
-    }
-    margin-top:40px;
-  }
-}
-
-.underline {
-
-  a{
-
-    &:hover{
-      text-decoration: none;
-    }
-
   }
 }

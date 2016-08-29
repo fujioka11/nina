@@ -14,7 +14,11 @@
   margin-left: auto;
 }
 
+@mixin basewidth() {
 
+	width: ceil((( 1240 / 1280 ) * 10000% )) / 100;
+	@include center();
+}
 
 //パーセント
 @mixin widtnPercent( $parentPxWidth, $pxWidth ){
@@ -24,13 +28,24 @@
 @mixin topPercent( $parentPxWidth, $pxWidth ){
     top: ceil((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
 }
+//パーセント高さ
+@mixin heightPercent($parentPxHeight, $pxHeight){
+    height: floor((($pxHeight / $parentPxHeight) * 10000%)) / 100;
+}
 
-//ポジション配置
+//パーセントマージン*/
+@mixin marginPercent($parentPxWidth, $mTop, $mRight, $mBottom, $mLeft){
+    margin : floor((($mTop / $parentPxWidth) * 10000%)) / 100 floor((($mRight / $parentPxWidth) * 10000%)) / 100 floor((($mBottom / $parentPxWidth) * 10000%)) / 100 floor((($mLeft / $parentPxWidth) * 10000%)) / 100;
+}
 
-@mixin positions($wid_size){
-	position: absolute;
-	left: 50%;
-	margin-left: $wid_size;
+@mixin marginPercent($parentPxWidth, $mTop, $mRight, $mBottom, $mLeft){
+    margin : floor((($mTop / $parentPxWidth) * 10000%)) / 100 floor((($mRight / $parentPxWidth) * 10000%)) / 100 floor((($mBottom / $parentPxWidth) * 10000%)) / 100 floor((($mLeft / $parentPxWidth) * 10000%)) / 100;
+}
+//backgroundパディング
+@mixin bgpadding( $height, $width ){
+	background-position:left center;
+	background-size:cover;
+	padding-top: calc(100% * $height / $width);
 }
 
 @mixin fts($fts, $lin: 24) {
@@ -41,31 +56,9 @@
   line-height: $linS;
 }
 
-@mixin parsent($default, $parent) {
-	margin-right: $default / $parent *100%;
-	/*height: 0px;*/
-}
-
-/*svg管理*/
-@mixin svgwidth($svgtitle) {
-	width: #{$svgtitle}px;
-	height: 17px;
-}
-
-//h3のテキスト
-@mixin top-h3() {
-	@include fts(12);
-	color: $basecolor;
-}
-
 @mixin p-txt(){
 	@include fts(14);
 	color: $txtxcolor;
-}
-
-@mixin fontface() {
-	font-family: "Brandon Grotesque";
-	font-weight: bold;
 }
 
 //グラデ

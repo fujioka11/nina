@@ -10,47 +10,31 @@ $md-device-width: 768px;
 $lg-device-width: 1080px;
 $xl-device-width: 1280px;
 
-/*キーカラー*/
-$backgroundcolor:#EAEAEA;
-
 //各コンテンツ
-$basewidth:1440px;
-$mainwidth:1080px;
+$basewidth:1280px;
+$mainwidth:1200px;
+$minwidth:1000px;
+
+$spwidth:750px;
 
 
+$basebg:#1e9fc6;
 
-$navwidth:260px;
-$navleft:40px;
 
 /*フォントカラー*/
 
 $basecolor:#444;
-$txtxcolor:#5B5B5B;
+$txtcolor:#5B5B5B;
 
 
 /*リンクカラー*/
 $linkcolor:#2975CE;
 
-/*ボタン*/
-$btcolor:#1BCDD9;
-$bthovercolor:#39DAB6;
-
 /*ボーダー*/
 $bordercolor:#E9E9E9;
-
-/*アンダーリンク*/
-$undercolor:#4A90E2;
-
-/*アイコン*/
-$iconwidth:30px;
-
 
 /*マージン*/
 $basemt:30px;
 
-
-
-
 /*スマホ*/
-
 $spwidth:375px;

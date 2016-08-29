@@ -1,388 +1,695 @@
-/*$h: (194/1235)*10000%)/100;*/
-/*chachテキストの高さ*/
-
-$service-color:#37DDB8;
-$chach_txt:15;
-
-
-.sp-contents{
-  @include respond(xs){
-  background: #fff;
-  padding: 15px 0 20px;
-  margin-bottom: 10px;
-}
-}
-
-.top_inner {
-
-  margin: 0 auto;
-  width: 100%;
-  text-align: left;
-  background: #fff;
-  position: relative;
-
-  @include respond(xs){
-    padding-bottom:10px;
-  }
+$colorbg:#f2f2f2;
 
 
 
-  .subtitle{
+.l-topcontent{
 
-    position:absolute;
-    left:40px;
-    top:50%-$chach_txt;
-    z-index:2;
-
-    @include respond(md){
-
-      left:20px;
-      top:50%-20;
-      @include widtnPercent(768,600);
-
-    }
-
-    @include respond(xs){
-
-      left:20px;
-      top:50%-25;
-      @include widtnPercent(768,600);
-
-    }
-
-    svg{
-      /*width: 800px;*/
-      @include respond(pc){
-        width: 700px;
-      }
-
-      //tbとsp
-      @include respond(md){
-        width:100%;
-      }
-
-      @include respond(xs){
-        width:100%;
-      }
-
-    }
-
-    .defs{
-      display: none;
-    }
-  }
-
-
-  .top-img{
-
-    background: url(../img/top/img_top.jpg) no-repeat 0 0;
-    background-position:left center;
-    background-size:cover;
-    padding-top: calc(100% * 400 / 850);
-    z-index: -1;
-    margin-left: (230 / 1080) *100%;
-
+  @include respond(pc){
+    @include basewidth();
+    @include center();
+    min-width: 980px;
   }
 }
 
-/*共通*/
-.top-contents {
+.l-main{
 
-  .readtxt{
-    width: 100%;
-    text-align: right;
-    padding-right: 20px;
-    margin-top: 15px;
-    letter-spacing: -0.09em;
-
-    @include respond(md){
-      padding-right: 0px;
-    }
-
-    @include respond(xs){
-      padding-right: 0px;
-      text-align: center;
-      border-top: 1px solid $bordercolor;
-      margin-top: 15px;
-      padding-top: 20px;
-      display: block;
-
-    };
-
-    span{
-      border-bottom: 1px solid $btcolor;
-      display: inline-block;
-      margin-right: 10px;
-      vertical-align: middle;
-      width: 50px;
-
-      @include respond(xs){
-        display: none;
-      }
-
-
-    }
-
-
-
-    a{
-      text-decoration: none;
-      font-weight: bold;
-      color: #0EBECA;
-      @include fts(16);
-
-      &:hover{
-        color: $bthovercolor;
-      }
-
-      @include respond(xs){
-        @include fts(13);
-        color:$txtxcolor;
-      }
-
-
-    }
+  @include respond(pc){
+    margin-top: 20px;
   }
+}
 
-  margin-top: 50px;
+.l-maininner{
+  position:relative;
+
+  @include respond(pc){
+    max-width: $basewidth;
+    min-width: $minwidth;
+    @include center();
+  }
 
   @include respond(md){
-
-    @include widtnPercent(768,728);
+    @include widtnPercent(640,640);
     @include center();
-    margin-top:40px;
+  }
+  @include respond(xs){
+    @include widtnPercent(640,640);
+    @include center();
+  }
 
-  };
+
+}
+.l-maincachetxt{
+
+  @include respond(pc){
+  position:absolute;
+  right:0px;
+  top: 50%;
+  margin-top: -100px;
+}
+
+
+@include respond(md){
+  display:none;
+}
+
+@include respond(xs){
+  display:none;
+}
+}
+
+.main {
+  width: 730px;
+  height: 163px;
+  margin: 0;
+  padding: 0;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-innerbg {
+  background-image: url("../img/top/img_top.jpg");
+  background-size: cover;
+
+  @include respond(pc){
+    width: 830px;
+    height: 610px;
+  }
+
+  @include respond(md){
+    @include widtnPercent(830,830);
+    height:400px;
+  }
 
   @include respond(xs){
-    margin-top:0px;
+    @include widtnPercent(830,830);
+    height:300px;
+  }
+}
 
-    @include widtnPercent(375,345);
-    @include center();
 
-  };
+.l-topcontents{
+
+  @include respond(pc){
+    @include basewidth();
+  }
+
+  @include respond(md){
+    background: #FFFFFF;
+    padding:20px 0 60px;
+    box-shadow: 0px 5px 0px 0px rgba(232,232,232,0.50);
+  }
+
+  @include respond(xs){
+    background: #FFFFFF;
+    padding:20px 0;
+    box-shadow: 0px 5px 0px 0px rgba(232,232,232,0.50);
+  }
+
+
 
   h3{
-
-    @include fts(14,20);
-    margin-bottom: 20px;
-    color: #4A4A4A;
-    display: inline-block;
-
-    @include respond(md){
-      margin-bottom: 10px;
-    }
+    text-align: center;
+    margin-bottom: $basemt;
 
     @include respond(xs){
-      margin-bottom:6px;
-      display: block;
-      color: #515151;
-      @include fts(12,20);
+      text-align: left;
     }
-
-    span.sp{
-
-      display: none;
-
-      @include respond(xs){
-        display: block;
-        @include fts(14);
-        color: #262626;
-        margin-bottom: 10px;
-        font-weight: normal;
-      }
-    }
-
-    span.pc{
-
-      display: block;
-
-      @include respond(xs){
-        display: none;
-      }
-    }
-
-
-
 
 
   }
 
-  .main-chach {
-
-    @include fts(16,32);
-    margin-bottom: 5px;
-
-  }
-
-  p{
-
-    @include fts(15,33);
-    @include widtnPercent(1100,1050);
-
-    @include respond(md){
-      @include fts(16,30);
-      width: 100%;
-    }
-
-    @include respond(xs){
-      @include fts(13,24);
-      width: 100%;
-    }
-
-
-
-  }
 }
+.l-about-block{
 
-/*service*/
-
-$servive-margin:8px;
-$service-color:#f1f1f1;
-
-.service-box{
-
-  margin-top: $basemt;
-  background: #f1f1f1;
-
-  letter-spacing: -.40em;//隙間消去用
-  padding-bottom: 1.04%;
+  @include respond(pc){
+    margin-top: $basemt +50;
+  }
 
   @include respond(md){
-    padding-bottom: 1.04%;
-    letter-spacing: -.40em;//隙間消去用
-    @include cf();
+    margin-top: $basemt;
   }
 
   @include respond(xs){
-    margin-top: 20px;
-    background: #f2f2f2;
+    margin-top: 0px;
+    @include widtnPercent(640,640);
+    @include center();
+  }
+
+    h3{
+      text-align: center;
+
+      @include respond(pc){
+        margin-bottom: $basemt;
+      }
+
+      @include respond(xs){
+        margin-bottom:15px;
+      }
+    }
+
+    .l-about-content {
+
+      @include respond(pc){
+        width: 550px;
+        @include center();
+      }
+
+      @include respond(md){
+        @include widtnPercent(640,400);
+        @include center();
+      }
+
+      @include respond(xs){
+        @include widtnPercent(640,540);
+        @include center();
+      }
+
+    }
+
+    p{
+      @include respond(pc){
+        text-align: center;
+        @include fts(16,36);
+      }
+
+      @include respond(md){
+        text-align: center;
+        @include fts(14,30);
+      }
+    }
+
+    .l-about-btnarea{
+
+      @include respond(pc){
+        height: 100px;
+        margin-top: $basemt +80;
+        background: $colorbg;
+        position: relative;
+      }
+
+      @include respond(md){
+        margin-top: $basemt +10;
+      }
+
+      @include respond(xs){
+        margin-top: 20px;
+      }
+    }
+
+    .l-btnarea-inner{
+
+      @include respond(pc){
+        width: 264px;
+        margin-left: -132px;
+        top: -30px;
+        left: 50%;
+        position: absolute;
+      }
+
+      @include respond(md){
+        @include widtnPercent(640,300);
+        @include center();
+      }
+
+      @include respond(xs){
+        @include widtnPercent(640,550);
+        @include center();
+      }
+    }
+}
+
+.top-about{
+
+  width: 138px;
+  height: 44px;
+
+  img{
+    width: 100%;
+    height: 100%;
+    margin: 0;padding: 0px;
+  }
+}
+
+
+.l-image-content{
+
+  position: relative;
+  height: 525px;
+
+  @include respond(md){
+    display: none;
+  };
+
+
+  .l-image-inner{
+    width: 1220px;
+    height: 528px;
+    position: absolute;
+    margin-left: -610px;
+    left: 50%;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bg-grey{
+    height: 200px;
+  }
+}
+
+.l-service-block{
+
+  @include respond(pc){
+    margin-top:100px;
+  };
+
+  @include respond(md){
+    margin-top:15px;
+    @include widtnPercent(640,640);
+    @include center();
+  };
+
+  @include respond(xs){
+    margin-top:10px;
+    @include widtnPercent(640,640);
+    @include center();
+  };
+
+
+  .summary {
+
+    @include respond(pc){
+      text-align: center;;
+      margin-top: $basemt +10;
+      text-align: center;
+    }
+
+    @include respond(md){
+      text-align:left;
+      @include widtnPercent(640,610);
+      @include center();
+      margin-top:20px;
+      @include fts(16,28);
+      display:none;
+    };
+
+    @include respond(xs){
+      text-align:left;
+      @include widtnPercent(640,600);
+      @include center();
+      margin-top:10px;
+    };
 
   }
 
 
+  .bg-grey{
+    height: 300px;
+  }
 
-  .service-name{
 
-    letter-spacing:normal;//隙間消去用
+  .top-service{
+
+    @include respond(pc){
+      height: 28px;
+      width: 80px;
+    }
+
+    @include respond(md){
+      fill:#ACACAC;
+      height: 10px;
+      width: 50px;
+    };
+
+    @include respond(xs){
+      fill:#ACACAC;
+      height: 10px;
+      width: 50px;
+    };
+
+    img{
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0px;
+    }
+  }
+
+  h3{
+    margin-bottom: $basemt - 10;
+
+    @include respond(xs){
+      display: none;
+    };
+  }
+
+  h4{
+    text-align: center;
+    font-weight: normal;
+    @include fts(23,38);
+    width: 500px;
+    @include center();
+
+    @include respond(md){
+      @include widtnPercent(640,400);
+      @include fts(20,38);
+      font-weight: bold;
+      text-align: center;
+    };
+
+    @include respond(xs){
+      @include widtnPercent(640,600);
+      @include fts(15,20);
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: left;
+    };
+
+
+  }
+
+  .l-service-content {
+
+    @include respond(pc){
+      margin-top: $basemt+10;
+      position: relative;
+      @include widtnPercent(1280,1200);
+      @include center();
+    };
+
+  }
+
+  .l-service-inner{
+
+    @include respond(pc){
+      letter-spacing: -40em;
+      @include cf();
+    }
+
+    @include respond(md){
+      @include widtnPercent(640,620);
+      @include center();
+      @include cf();
+    };
+
+    @include respond(xs){
+      border-bottom:1px solid $bordercolor;
+    };
+
+  }
+
+  .service-name {
 
     @include respond(pc){
 
-    @include widtnPercent(1080,260);
-    display: inline-block;
-    vertical-align: top;
-    letter-spacing:normal;//隙間消去用
-    margin-top: 0.74%;
-    margin-left: 0.74%;
-  }
+      letter-spacing: normal;
+      @include widtnPercent(1200,270);
+      float: left;
+      margin-left: 2%;
+      border-top: 2px solid $basebg;
+      padding: 25px 2.5%;
+      background: #FFFFFF;
+      box-shadow: 0px 1px 1px 0px rgba(187,187,187,0.50);
+    };
 
     @include respond(md){
-      @include widtnPercent(768,182);
+
+      letter-spacing: normal;
+      @include widtnPercent(640,314);
       float: left;
-      letter-spacing:normal;//隙間消去用
-      margin-top: 1.04%;
-      margin-left: 1.04%;
-
-    }
-
-    @include respond(xs){
-      width: 100%;
-      @include center();
-      padding-left: 0.74%;
-      padding-right: 0.74%;
+      margin-left:0.625%;
+      border-top: 2px solid $basebg;
+      padding: 20px 3.125% 25px;
+      background: #FFFFFF;
+      margin-top:20px;
+      border-bottom:1px solid $bordercolor;
+      border-left:1px solid $bordercolor;
+      border-right:1px solid $bordercolor;
     };
+
   }
 
-  .service-title{
-    text-align: center;
-    background: #fff;
-    padding: 30px 0;
-    border-bottom: 1px solid $service-color;
+  .service-title {
 
-    @include respond(xs){
-      padding: 3% 0 3% 5%;
-      background: #f2f2f2;
-      text-align: left;
 
+    @include respond(pc){
+      text-align: center;
+      @include fts(16,20);
+      border-bottom: 1px solid #f2f2f2;
+      padding-bottom: 25px;
     }
 
-    em{
-      @include fts(15);
-      font-weight: bold;
-      display: block;
-      position: relative;
-      padding-bottom: 23px;
+    @include respond(md){
+      text-align: left;
+      @include fts(16,20);
+      color:#000;
+    }
+
+    @include respond(xs){
+      text-align: left;
+      @include fts(14,20);
+      border-top:1px solid #f2f2f2;
+      border-bottom:1px solid #f2f2f2;
+      padding:10px 3.125%;
+      background: #EEEEEE;
+      color:#000;
+    }
+
+
+
+    h5{
+      font-weight: normal;
 
       @include respond(md){
-        @include fts(13);
+        @include fts(16);
+        font-weight: bold;
       }
+
       @include respond(xs){
-        @include fts(13);
-        padding-bottom:0px;
-      }
-
-
-
-      &:before,&:after{
-        background: #00C793;
-        bottom: 9px;
-        content: "";
-        height: 2px;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        width: 25px;
-
-        @include respond(xs){
-          display: none;
-        }
-
+        font-weight: bold;
       }
     }
 
     span{
       display: block;
-      @include fts(9);
+      @include fts(10);
       font-weight: normal;
-
-      @include respond(xs){
-        display: none;
-      }
-
-
     }
   }
-
-  .service-detail{
-    background: #fff;
-  }
-
-  .service-detail{
-    padding: 20px 20px 25px;
-    @include fts(13,22);
-    display: flex;
-
+  .service-list {
+    @include respond(pc){
+      margin-top: 20px;
+      @include fts(13,30);
+    };
+    @include respond(md){
+      margin-top: 10px;
+      @include fts(13,30);
+    };
     @include respond(xs){
-      padding: 5.3% 5.3% 6.6%;
+      padding:3.125%;
+      @include  fts(11);
     };
 
-    ul{
-      margin-top: -5px;
 
-      @include respond(xs){
-        width: 100%;
-      };
-
-    }
-
-    li{
-      list-style: inside;
-      margin-top: 5px;
-    }
   }
+}
 
+.bg-grey{
+  background: $colorbg;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 
-/*work*/
+
+.l-works-block{
+
+  @include respond(pc){
+    margin-top: 100px;
+  };
+
+  @include respond(md){
+    margin-top: 15px;
+    padding-bottom:0px!important;
+  };
+  @include respond(xs){
+    margin-top: 10px;
+  };
+
+
+
+  .button {
+    background: #34B15D;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  h3{
+    margin-bottom: 15px;
+
+    @include respond(xs){
+      display: none;
+    };
+
+  }
+
+  .top-works{
+    width: 76px;
+    height: 18px;
+
+    @include respond(md){
+      width: 52px;
+      fill:#ccc;
+    };
+
+    img{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0px;
+    }
+  }
+
+  h4{
+
+    @include respond(pc){
+      text-align: center;
+    }
+    @include respond(md){
+      @include fts(22,38);
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    };
+
+    @include respond(xs){
+      @include widtnPercent(640,600);
+      @include fts(15,20);
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: left;
+      @include center();
+    };
+  }
+
+  .l-works-inner {
+    background: #34B15D;
+    padding: 40px 0 0;
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+
+    @include respond(md){
+      margin-top: 20px;
+      padding: 30px 0 0;
+    };
+
+    @include respond(xs){
+      margin-top: 20px;
+      padding: 20px 0;
+    };
+
+    p{
+      @include respond(xs){
+        @include widtnPercent(640,550);
+        @include center();
+        color: #fff;
+        text-align: left;
+      }
+
+      @include respond(md){
+        @include widtnPercent(640,400);
+        text-align:center;
+        @include center();
+        color: #fff;
+        @include fts(16,28);
+      }
+    }
+
+    .l-btnarea {
+      @include widtnPercent(640,300);
+      @include center();
+    }
+  }
+
+  .l-works-img{
+
+    @include respond(xs){
+      display: none;
+    };
+
+    @include respond(md){
+      @include widtnPercent(640,600);
+      @include center();
+      margin-top: 60px;
+    };
+
+    @include respond(pc){
+      width: 800px;
+      margin-top: 80px;
+    };
+    @include center();
+    border-top: 15px solid #444;
+    border-right: 15px solid #444;
+    border-left: 15px solid #444;
+
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.l-btnarea {
+
+
+  @include respond(pc){
+    width: 264px;
+    @include center();
+    margin-top: 60px;
+  };
+
+  @include respond(md){
+    @include widtnPercent(640,300);
+    @include center();
+    margin-top: 40px;
+  };
+
+  @include respond(xs){
+    @include widtnPercent(640,550);
+    @include center();
+    margin-top: 20px;
+  };
+
+
+
+}
+
+.under-border {
+
+  @include respond(pc){
+
+    position: relative;
+    height: 130px;
+
+    &:before{
+      content: "";
+      position: absolute;     // 絶対位置指定
+      width: 500px;
+      left: 50%;
+      margin-left: -250px;               // 横幅指定
+      height:1px;                // 縦幅指定
+      bottom: 0px;              // 下側から15pxの位置に表示
+      border-top: 1px solid $basebg;
+      z-index: 1;                  // ※後で変更する
+    }
+  }
+}

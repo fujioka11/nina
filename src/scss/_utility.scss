@@ -2,26 +2,18 @@
   margin-top: 15px;
 }
 
-.tb_mt10{
-
-  @include respond(md){
-    margin-top: 20px;
-  };
-
+.bold{
+  font-weight: bold;
 }
 
-.sp_mt10{
-  margin-top: 10px;
-}
-
-.tb_none{
-
-  @include respond(md){
-    display: none;
-  };
-
+.pc {
   @include respond(xs){
-    display: none;
+    display: none!important;
   };
+}
 
+.sp-mb{
+  @include respond(xs){
+    margin-bottom: 10px;
+  }
 }

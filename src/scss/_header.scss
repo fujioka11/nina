@@ -1,0 +1,209 @@
+.header-container{
+  background: #fff;
+
+  @include respond(md){
+    margin-top: 20px;
+  }
+  @include respond(xs){
+    margin-top: 20px;
+  }
+}
+
+
+.header-inner{
+  @include respond(pc){
+    max-width: 1280px;
+    min-width: 1000px;
+    height: 130px;
+  }
+
+  @include respond(md){
+    @include widtnPercent(640,640);
+  }
+  @include respond(xs){
+    @include widtnPercent(640,640);
+  }
+
+  @include center();
+  @include cf();
+  position: relative;
+
+}
+
+.header-position{
+  @include respond(pc){
+  position: absolute;
+  top: 30px;
+}
+}
+
+.header-navleft{
+
+  @include respond(pc){
+    left: 0px;
+  }
+
+  @include respond(md){
+    text-align:center;
+  }
+  @include respond(xs){
+    text-align:center;
+  }
+
+
+
+  .title {
+
+    width: 97px;
+    height: 37px;
+
+    @include respond(xs){
+      display: inline-block;
+    }
+
+    @include respond(md){
+      display: inline-block;
+    }
+
+
+
+    .logo{
+      width: 100%;
+      height: 100%;
+
+      img{
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+
+
+  }
+  h1{
+    font-weight: normal;
+    margin-top: 15px;
+    @include fts(12);
+
+    @include respond(xs){
+      margin-top: 10px;
+      @include fts(10);
+    };
+  }
+
+}
+.header-navright{
+
+  @include respond(pc){
+    right: 15.1%;
+  }
+  @include respond(md){
+    margin-top:15px;
+    @include fts(16);
+  }
+
+  @include respond(xs){
+    margin-top:15px;
+    @include fts(11);
+  }
+
+  li{
+
+    @include respond(pc){
+      display: inline;
+      margin-left: 30px;
+    }
+
+    @include respond(md){
+      text-align:center;
+      display:table-cell;
+      @include widtnPercent(640,160);
+      vertical-align:middle;
+      text-align:center;
+    }
+    @include respond(xs){
+      text-align:center;
+      display:table-cell;
+      @include widtnPercent(640,160);
+      vertical-align:middle;
+      text-align:center;
+    }
+  }
+
+  a{
+    font-weight: bold;
+
+    @include respond(md){
+      display: block;
+      width: 100%;
+      padding: 30px 0;
+      border-left: 1px solid #E7E7E7;
+      background: #fff;
+    }
+
+    @include respond(xs){
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      border-left: 1px solid #E7E7E7;
+      background: #fff;
+    }
+
+
+  }
+
+}
+
+.header-navinner {
+
+  @include respond(md){
+    display: table;
+    width: 100%;
+    border-top: 1px solid $bordercolor;
+    box-shadow: 0px 1px 1px 0px #ccc;
+  }
+
+  @include respond(xs){
+    display: table;
+    width: 100%;
+    border-top: 1px solid $bordercolor;
+    box-shadow: 0px 1px 1px 0px #ccc;
+  }
+
+}
+
+.header-navsns{
+
+  @include respond(pc){
+    right: 0px;
+    margin-left: -10px;
+  }
+
+  @include respond(md){
+    display:none;
+  }
+
+  @include respond(xs){
+    display:none;
+  }
+
+  li{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: #84C9D2;
+    text-align: center;
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 10px;
+
+
+  }
+
+  .sns-logo{
+    fill:#fff;
+    width: 20px;
+    height: 20px;
+  }
+
+}

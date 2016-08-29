@@ -3,15 +3,48 @@ html{
   margin: 0;
   padding: 0;
 }
-  body{
+
+body{
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 1.8em;
-  font-family: "Lato","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  color: $basecolor;
+
+  @include respond(pc){
+    font-family: "Lato","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  };
+
+  @include respond(md){
+    font-family: "Lato","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  };
+
+  @include respond(xs){
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  };
+
+
+  color: $txtcolor;
   height: 100%;
   background: #fff;
+
+  @include respond(xs){
+    color: #4A4A4A;
+  };
+}
+
+p{
+  @include fts(16,28);
+
+  @include respond(md){
+    @include fts(18,26);
+    color: #000;
+  };
+
+  @include respond(xs){
+    @include fts(13,24);
+    color: #000;
+  };
+
 }
 
 li{
@@ -19,328 +52,126 @@ li{
 }
 
 a{
-  color: $linkcolor;
+  color: $txtcolor;
   text-decoration: none;
 
+  &:hover{
+    color: $basebg;
+  }
+}
+h1,h2,h3,h4,h5{
+  font-weight: normal;
 }
 
-p{
-
-  @include respond(pc){
-    color: $txtxcolor;
-    @include fts(15,33);
-  }
-
-  @include respond(md){
-    color: #000;
-    @include fts(16,30);
-  }
-
-  @include respond(xs){
-    color: #000;
-    @include fts(13,24);
-  }
-
-
-}
-
-.wrap {
+.container {
   width: 100%;
   position: relative;
-  background: #fff;
-  border-top: 5px solid $btcolor;
 
-  @include respond(md){
-    min-width: $sm-device-width;
+  @include  respond(xs){
+    background: #E9E9E9;
   };
-
-  @include respond(xs){
-    background:#f2f2f2;
-  };
-
-
 }
 
-header{
-  text-align: right;
-  background: #fff;
-  @include widtnPercent(1440,1360);
+.base-btn{
+  text-align: center;
+  color: #fff;
+  background: $basebg;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.button {
+
+  background:$basebg;
+
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+
+  @include respond(md){
+
+    padding: 25px 0;
+
+  };
+
+  &:hover{
+    color: #fff;
+    background: #EAC54F;
+  }
+}
+
+
+.footer-inner {
+
+  @include respond(pc){
+
+  max-width: 1280px;
+  min-width: 1000px;
+}
+
+@include respond(md){
+  @include widtnPercent(640,600);
   @include center();
-  text-align: left;
-  padding: 20px 0 30px;
-
-  @include respond(md){
-    display: none;
-  };
-
-  @include respond(xs){
-    display: none;
-  };
-
-
-  h1{
-    font-weight: normal;
-    @include fts(12);
-    display: inline-block;
-  }
 }
 
-nav{
-
-  @include respond(pc){
-    background: #fff;
-    min-height: 280px;
-    position: fixed;
-    left: 2.77%;
-    top: 160px;
-    width: $navwidth - 100;
-    z-index: 1;
-  }
-
-  @include respond(md){
-    width:100%;
-    height:86px;
-    @include center();
-    padding-top:20px;
-    position:relative;
-  }
-
-  @include respond(xs){
-    width:100%;
-    height:70px;
-    background:#fff;
-    @include center();
-    padding-top:20px;
-    position:relative;
-  }
-
-  .logo{
-
-    height: 40px;
-    width: 100px;
-
-    @include respond(md){
-      position: absolute;
-      left: 50%;
-      margin-left: -60px;
-    }
-
-    @include respond(xs){
-      position: absolute;
-      left: 50%;
-      margin-left: -35px;
-      width: 70px;
-      height:25px;
-    }
-
-    img{
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  a{
-    color:$basecolor;
-  }
-
-
+@include respond(xs){
+  @include widtnPercent(640,600);
+  @include center();
 }
 
 
-.sns-box{
-  margin: 40px 0 0 -10px;
 
-  @include respond(md){
-    display: none;
-  };
-
-  @include respond(xs){
-    display: none;
-  };
-
-  li{
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin-left: 10px;
-
-    .foot-icon{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      fill:#ccc;
-    }
-  }
-
-}
-
-.request {
-
-
-  @include respond(xs){
-    display: none;
-  }
-
-  @include respond(md){
-    position: absolute;
-    @include widtnPercent(768,140);
-    text-align: center;
-    top: 24px;
-    right:20px;
-
-
-    a{
-      display: block;
-      background: $btcolor;
-      padding: 2px;
-      color: #fff;
-      font-weight: bold;
-      padding: 6px 0;
-
-      box-shadow: 0px 1px 1px 0px rgba(106,106,106,0.50);
-
-      @include respond(md){
-        background: $bthovercolor;
-      }
-
-
-
-      .icon{
-        display: none;
-      }
-
-    }
-  }
-
-
-
-  @include respond(pc){
-
-    width: 90%;
-    position: relative;
-    @include fts(13);
-    margin-left: -5px;
-    margin-top:20px;
-
-
-    a{
-      display: block;
-      background: $btcolor;
-      padding: 6px 0 6px 13px;
-      color: #fff;
-
-      .icon{
-        width: 10px;
-        height: 10px;
-        fill:#fff;
-        position: absolute;
-        right: 10px;
-        top: 13px;
-      }
-
-      &:hover{
-        background: $bthovercolor;
-        color: #fff;
-
-        .icon{
-          fill:#fff;
-        }
-      }
-    }
-  }
-}
-
-.main{
-
-  @include respond(pc){
-    margin-left: $navwidth + $navleft;
-    position: relative;
-    min-width: 768px;
-    @include parsent(40,1440);
-  }
-
-  a{
-    text-decoration: none;
-
-    &:hover{
-      text-decoration: none;
-    }
-  }
-
-}
-.latest{
-  background: $bordercolor;
-  width: 100%;
-}
-
-footer{
-  @include widtnPercent(1440,1360);
-  @include center;
-  margin-top: 50px;
-  height: 90px;
+  @include center();
   position: relative;
+  height: 60px;
+}
 
-  @include respond(md){
-    height: 60px;
-  }
+
+.footer-container {
+  @include respond(pc){
+  margin-top: 40px;
+}
+
+@include respond(md){
+margin-top: 40px;
+}
 
   @include respond(xs){
-    height: 60px;
-    margin-top: 20px;
+    background: #fff;
+    padding-top: 20px;
+  }
+}
+
+
+.pagetop{
+  position: absolute;
+  right: 10px;
+  top:0;
+
+  @include respond(xs){
+    top: -5px;
   }
 
 
-  .pagetop{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 0;
+}
 
-    @include respond(xs){
-      top: -13px;
-    }
+.copy{
+  position: absolute;
+  left: 0;
+}
 
+.pagetop-icon{
+  width: 40px;
+  height: 40px;
 
-
-
-    a{
-
-      .top-icon{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        fill:$txtxcolor;
-      }
-
-      &:hover{
-
-        .top-icon{
-          fill:$btcolor;
-        }
-      }
-
-    }
-
-
-
-  }
-
-  .copyright{
-
-    display: inline;
-    position: absolute;
-    left: 0;
-    top: 10px;
-    @include fts(11);
-
-    @include respond(xs){
-      @include fts(10);
-      top: 4px;
-    }
-
-
-
+  img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
